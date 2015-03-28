@@ -1,0 +1,210 @@
+package svgview.reactions;
+
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
+import java.util.Map;
+
+import model.reaction.MTruncation;
+import model.specie.MAddedSpeciesLink;
+
+import org.w3c.dom.Document;
+
+import svgview.shape.SVGArrow;
+import svgview.shape.SVGComplexShape;
+import svgview.shape.SVGLine;
+import svgview.shape.SVGShape;
+import svgview.shape.Segment;
+import svgview.species.SVGSpecie;
+
+public class SVGTruncation extends SVGGenericReaction {	
+	MTruncation mtrunc;
+	
+	public SVGTruncation(Document svgDoc, MTruncation mtrunc, Map<String, SVGSpecie> species) {
+		super(svgDoc, mtrunc, species);
+		this.mtrunc = mtrunc;
+	}
+
+	protected SVGShape buildSVGShape_() {
+		return null;
+	}
+	
+	protected SVGShape buildSVGShape() {
+		SVGComplexShape complex = new SVGComplexShape();
+		
+		String idr = mr.getReactants().get(0).getMs().getIdAlias();
+		String idp0 = mr.getProducts().get(0).getMs().getIdAlias();			
+		String idp1 = mr.getProducts().get(1).getMs().getIdAlias();
+		SVGSpecie reac = this.species.get(idr);
+		SVGSpecie prod0 = this.species.get(idp0);
+		SVGSpecie prod1 = this.species.get(idp1);
+		int[] arm = mtrunc.getArms();
+		int rectangleIndex = mtrunc.getTShapeIndex();
+				
+		// Primero calcular punto de union, basado en los vectores R->P0, y R->P1
+		Point2D centerR = reac.getCenter();
+		Point2D centerP0 = prod0.getCenter();
+		Point2D centerP1 = prod1.getCenter();
+		Point2D epJoin = editPoints.lastElement();
+		
+		Point2D pjoin = new Point2D.Double(
+							// R->P0
+							(centerP1.getX() - centerR.getX()) * epJoin.getY() + 
+							(centerP0.getX() - centerR.getX()) * epJoin.getX() +
+							centerR.getX(), 
+							// R->P1
+							(centerP1.getY() - centerR.getY()) * epJoin.getY() + 
+							(centerP0.getY() - centerR.getY()) * epJoin.getX() +
+							centerR.getY()
+				);
+		
+//		complex.add( getEditPoints(pjoin, "yellow") );
+//		complex.add( getEditPoints(centerP0, "red") );
+//		complex.add( getEditPoints(centerP1, "green") );
+
+		// Rama0
+		Point2D porigR = reac.getSVGShape().intersection( new Segment( pjoin, centerR ) );
+//		complex.add( getEditPoints(porigR, "fuchsia") );
+		
+		AffineTransform at1 = getEditPointTransform(new Segment(pjoin, porigR));		
+		Point2D pp;
+		for(int i=0; i < arm[0]; i++) {
+			pp = editPoints.get(i);
+			at1.transform(pp, pp);
+//			complex.add( getEditPoints(pp, "blue")  );			
+		}
+		
+		// Rama1
+		Point2D pdestP0 = prod0.getSVGShape().intersection( new Segment( pjoin, centerP0 ) );
+//		complex.add( getEditPoints(pdestP0, "lime") );
+		at1 = getEditPointTransform(new Segment(pjoin, pdestP0));		
+		for(int i=arm[0]; i < arm[0]+arm[1]; i++) {
+			pp = editPoints.get(i);
+			at1.transform(pp, pp);
+//			complex.add( getEditPoints(pp, "blue")  );
+		}			
+		
+//		// Rama2
+		Point2D pdestP1 = prod1.getSVGShape().intersection( new Segment( pjoin, centerP1 ) );
+//		complex.add( getEditPoints(pdestP1, "orange") );
+		at1 = getEditPointTransform(new Segment(pjoin, pdestP1));		
+		for(int i=arm[0]+arm[1]; i < arm[0]+arm[1]+arm[2]; i++) {
+			pp = editPoints.get(i);
+			at1.transform(pp, pp);
+//			complex.add( getEditPoints(pp, "blue")  );
+		}	
+		
+		// Primeros y ultimos de cada rama
+		if (arm[0] != 0) {
+			complex.add( new SVGLine(porigR.getX(), porigR.getY(), 
+									 editPoints.elementAt(arm[0]-1).getX(), editPoints.elementAt(arm[0]-1).getY()) );
+			complex.add( new SVGLine(editPoints.elementAt(0).getX(), editPoints.elementAt(0).getY() ,  
+					 pjoin.getX(), pjoin.getY() ) );
+		} else {
+			complex.add( new SVGLine(porigR.getX(), porigR.getY(), pjoin.getX(), pjoin.getY()) );
+		}
+		
+		Point2D p1, p2;
+		for(int i=0; i < arm[0]-1; i++) {
+			p1 = editPoints.elementAt(i);
+			p2 = editPoints.elementAt(i+1);
+			complex.add( new SVGLine(p1.getX(), p1.getY(), p2.getX(), p2.getY()) );
+		}
+			
+
+		// Dibujar Rama1
+		if (arm[1] != 0) {
+			complex.add( new SVGArrow(editPoints.elementAt(arm[0]+arm[1]-1).getX(), editPoints.elementAt(arm[0]+arm[1]-1).getY(),
+									 pdestP0.getX(), pdestP0.getY() ) );
+			
+			complex.add( new SVGLine(pjoin.getX(), pjoin.getY(), 
+									 editPoints.elementAt(arm[0]).getX(), editPoints.elementAt(arm[0]).getY() ) );
+		} else {
+			complex.add( new SVGArrow(pjoin.getX(), pjoin.getY(), pdestP0.getX(), pdestP0.getY()) );
+		}
+		
+		for(int i=arm[0]; i < arm[0]+arm[1]-1; i++) {
+			p1 = editPoints.elementAt(i);
+			p2 = editPoints.elementAt(i+1);
+			complex.add( new SVGLine(p1.getX(), p1.getY(), p2.getX(), p2.getY()) );
+		}
+		
+		// Dibujar Rama2
+		if (arm[2] != 0) {
+			complex.add( new SVGArrow(editPoints.elementAt(arm[0]+arm[1]+arm[2]-1).getX(), 
+									 editPoints.elementAt(arm[0]+arm[1]+arm[2]-1).getY(),
+									 pdestP1.getX(), pdestP1.getY()) );
+			
+			complex.add( new SVGLine(pjoin.getX(), pjoin.getY(),
+									 editPoints.elementAt(arm[0]+arm[1]).getX(), 
+									 editPoints.elementAt(arm[0]+arm[1]).getY() ) );
+		} else {
+			complex.add( new SVGArrow(pjoin.getX(), pjoin.getY(), pdestP1.getX(), pdestP1.getY() ) );
+		}
+		
+		for(int i=arm[0]+arm[1]; i < arm[0]+arm[1]+arm[2]-1; i++) {
+			p1 = editPoints.elementAt(i);
+			p2 = editPoints.elementAt(i+1);
+			complex.add( new SVGLine(p1.getX(), p1.getY(), p2.getX(), p2.getY()) );
+		}
+
+		// SVGShape rect;
+		Point2D pAddR, pAddP;
+		if (arm[0] == 0) {
+			
+			pAddR = porigR;
+			pAddP = pjoin;
+			
+		} else {
+			if (rectangleIndex == 0) {			
+				// Primer segmento
+				pAddR = editPoints.elementAt(0);
+				pAddP = pjoin;
+//				complex.add( getRectangleBetween(pAddR, pAddP, "N") );
+				
+			} else if (rectangleIndex == arm[0]) {
+				// Ultimo segmento
+				pAddR = porigR;
+				pAddP = editPoints.elementAt(arm[0]-1);
+//				complex.add( getRectangleBetween(pAddR, pAddP, "N") );
+			} else {
+				pAddP = editPoints.elementAt(rectangleIndex-1);
+				pAddR = editPoints.elementAt(rectangleIndex);				
+//				complex.add( getRectangleBetween(pAddR, pAddP, "N"));
+	//			shape = shape.composeWith( getRectangleBetween(p1, p2) );		
+			}	
+		}
+		
+		SVGShape square = getRectangleBetween(porigR, pjoin, "N");			
+		complex.add( square );
+		Point2D rectangleCenter = new Segment( porigR, pjoin).getCenter();
+		
+//		SVGSpecie svgSpc;
+		for (MAddedSpeciesLink spc : mtrunc.getReactantLinks()) {
+//			svgSpc  = species.get( spc.getMs().getIdAlias() );						
+			complex.add( getAddedReactant(spc, pAddR, rectangleCenter) );
+		}					
+		for (MAddedSpeciesLink spc : mtrunc.getProductLinks()) {
+//			svgSpc  = species.get( spc.getMs().getIdAlias() );						
+			complex.add( getAddedProduct(spc, pAddP, rectangleCenter) );
+		}	
+				
+//		SVGShape circle = new SVGCircle(pjoin.getX(), pjoin.getY(), 5.5).composeWith(
+//										new SVGCircle(pjoin.getX(), pjoin.getY(), 3));
+//		circle.setAttribute("stroke", "black");
+//		circle.setAttribute("fill", "white");
+//		complex.add(circle);
+		
+		
+		complex.setAttribute("id", mr.getId()); // shp.setAttribute("style", "text-rendering: auto;");		
+		complex.setAttribute("onclick", "infoWindow(\"" + mr.getId() + "\"," +
+				 "\"" + mr.getId() + "\","+
+				 "\"" + "Homodimer Association" + "\"" +
+				 ");");
+		complex.setAttribute("stroke", "black");
+		complex.setAttribute("stroke-linecap", "round");
+		
+		shape = complex;
+		return complex;
+	}
+
+}

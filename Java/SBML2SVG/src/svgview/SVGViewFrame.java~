@@ -1,0 +1,625 @@
+package svgview;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.awt.geom.AffineTransform;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.zip.GZIPOutputStream;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.filechooser.FileFilter;
+
+import model.Model;
+
+import org.apache.batik.bridge.UpdateManagerEvent;
+import org.apache.batik.bridge.UpdateManagerListener;
+import org.apache.batik.dom.svg.SVGDOMImplementation;
+import org.apache.batik.dom.util.DOMUtilities;
+import org.apache.batik.swing.JSVGCanvas;
+import org.apache.batik.swing.gvt.GVTTreeRendererAdapter;
+import org.apache.batik.swing.gvt.GVTTreeRendererEvent;
+import org.apache.batik.swing.svg.GVTTreeBuilderAdapter;
+import org.apache.batik.swing.svg.GVTTreeBuilderEvent;
+import org.apache.batik.swing.svg.SVGDocumentLoaderAdapter;
+import org.apache.batik.swing.svg.SVGDocumentLoaderEvent;
+import org.apache.batik.transcoder.TranscoderException;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.batik.transcoder.image.PNGTranscoder;
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.svg.SVGDocument;
+
+import svgcontroller.SVGController;
+import svgview.species.SVGSpecie;
+
+public class SVGViewFrame extends JFrame {
+	private static final long serialVersionUID = 1045729816288512670L;
+	private Document document; 							// The SVG document 
+	protected JSVGCanvas svgCanvas;
+    private static final String svgNS = SVGDOMImplementation.SVG_NAMESPACE_URI;
+    private DOMImplementation dom;
+    private JScrollPane jsp;
+    private JMenuBar mb;
+    private JStatusBar jsb;
+    protected HashMap<String,SVGSpecie> svgSpecies = new HashMap<String,SVGSpecie>();
+    private Dimension diagramSize;
+    private String prevPath;
+    
+    public void setNewController(SVGController cnt) {
+    	this.diagramSize = cnt.getSVGView().getDimension() ;
+    	
+    	this.svgCanvas = cnt.getSVGView().getCanvas();
+    	svgCanvas.setDocumentState (JSVGCanvas.ALWAYS_DYNAMIC);
+
+    	setSVGCanvasListeners();   	
+    
+//    	jsp = new JScrollPane( cnt.getSVGView().getCanvas() );
+    	this.jsp.setViewportView( cnt.getSVGView().getCanvas() ) ;
+    	jsp.setPreferredSize(svgCanvas.getPreferredSize()); //new Dimension(800, 600));
+    	
+//        final JPanel panel = new JPanel(new BorderLayout());
+//        panel.add("Center", jsp);
+//        panel.add("South", jsb = new JStatusBar());
+//        this.getContentPane().add(panel);
+//        this.pack();
+//        this.setSize(800, 600);     	
+    	this.update( this.getGraphics() );
+    	
+    }
+    
+    public SVGViewFrame(SVGController cnt) {
+//    	this.cnt = cnt;
+//    	this.model = cnt.getModel();
+    	
+    	this.diagramSize = cnt.getSVGView().getDimension() ;
+    	
+    	this.svgCanvas = cnt.getSVGView().getCanvas();
+    	svgCanvas.setDocumentState (JSVGCanvas.ALWAYS_DYNAMIC);
+    	
+    	initMenuBar();
+    	
+    	setSVGCanvasListeners();   	
+    
+    	jsp = new JScrollPane( this.svgCanvas /*cnt.getSVGView().getCanvas()*/ );
+    	jsp.setPreferredSize(svgCanvas.getPreferredSize()); //new Dimension(800, 600));
+    	
+        final JPanel panel = new JPanel(new BorderLayout());
+        panel.add("Center", jsp);
+        panel.add("South", jsb = new JStatusBar());
+        this.getContentPane().add(panel);
+        this.pack();
+        this.setSize(800, 600);      
+    }
+    
+    public SVGViewFrame(Model m, SVGController cnt) {
+//    	this.model = m; 
+//    	this.cnt = cnt;
+    	
+    	this.diagramSize = cnt.getSVGView().getDimension() ;    	
+    	
+    	initMenuBar();
+    	
+    	svgCanvas = new JScrollableSVGCanvas();
+    	svgCanvas.setPreferredSize(this.diagramSize);
+    	
+    	jsp = new JScrollPane(svgCanvas);
+    	jsp.setPreferredSize(svgCanvas.getPreferredSize());//new Dimension(800, 600));
+    	
+	    // Force the canvas to always be dynamic
+    	svgCanvas.setDocumentState (JSVGCanvas.ALWAYS_DYNAMIC);
+        
+        setSVGCanvasListeners();
+
+	    // Create the document and attach it to the canvas
+	    this.dom = SVGDOMImplementation.getDOMImplementation();
+	    
+	    document = dom.createDocument (svgNS, "svg", null);	  
+	    
+	    svgCanvas.setDocument (document);
+	  
+	    
+        final JPanel panel = new JPanel(new BorderLayout());
+        panel.add("Center", jsp);
+        panel.add("South", jsb = new JStatusBar());
+        this.getContentPane().add(panel);
+        this.pack();
+        this.setSize(800, 600);
+        
+        // initializeSVG();
+    }
+   
+    
+    /**
+     * Inicializar las opciones del menu de la ventana de visualización del SVG     * 
+     */
+	private void initMenuBar(){
+		this.mb = new JMenuBar();
+		
+		JMenu m1 = new JMenu("Archivo");
+		m1.setMnemonic('a');
+		this.mb.add(m1);
+		JMenuItem mi11 = new JMenuItem("Abrir");
+		mi11.setMnemonic('b');
+		m1.add(mi11);
+		mi11.addActionListener(
+			new ActionListener() {
+				public void actionPerformed(ActionEvent e) {				   
+				   JFileChooser	fc = new JFileChooser(SVGViewFrame.this.getPrevPath() );
+//				   FileFilter flt = new FileFilter();
+				   
+				   fc.setFileFilter(
+						   new FileFilter(){
+							   @Override
+							   public String getDescription() {										
+									return "Archivo SBML";
+							   }
+							   public boolean accept(File f){
+								   return f.getName().endsWith(".xml") || f.isDirectory();
+							   }
+						   });
+				   int status = fc.showOpenDialog(SVGViewFrame.this);
+				   if (status == JFileChooser.APPROVE_OPTION) {
+//					  
+					   try {
+						   SVGViewFrame.this.setPrevPath( fc.getSelectedFile().getAbsolutePath() );
+						   SVGViewFrame.this.setNewController( new SVGController( fc.getSelectedFile().getAbsolutePath()   )  );
+					   } catch (Exception any) {
+						   any.printStackTrace();						   
+					   }
+				   }
+				}						
+			}
+		);
+		JMenuItem mi12 = new JMenuItem("Salvar como...");
+		mi12.setMnemonic('s');
+		mi12.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+				        // Show dialog to choose where and under which
+				        // name to save the file
+						 JFileChooser fcSave = new JFileChooser();
+						 fcSave.setFileFilter(
+								   new FileFilter(){
+									   @Override
+									   public String getDescription() {										
+											return "Archivo SVG";
+									   }
+									   public boolean accept(File f){
+										   return f.getName().endsWith(".svg") || f.isDirectory();
+									   }
+								   });
+						 fcSave.addChoosableFileFilter(
+								   new FileFilter(){
+									   @Override
+									   public String getDescription() {										
+											return "Archivo SVGZ (SVG Comprimido)";
+									   }
+									   public boolean accept(File f){
+										   return f.getName().endsWith(".svgz") || f.isDirectory();
+									   }
+								   });
+						 fcSave.addChoosableFileFilter(
+								   new FileFilter(){
+									   @Override
+									   public String getDescription() {										
+											return "Archivo PNG";
+									   }
+									   public boolean accept(File f){
+										   return f.getName().endsWith(".png") || f.isDirectory();
+									   }
+								   });						 
+						 
+				         int returnVal = fcSave.showSaveDialog(SVGViewFrame.this);
+
+				        // If button "Save" was pressed (not "Cancel")
+				         if (returnVal == JFileChooser.APPROVE_OPTION) {
+				            // Get the file path and pass it to the method
+				            // that will perform saving
+				        	 File file = fcSave.getSelectedFile();
+				        	 if (file.getName().endsWith(".svgz")) {
+				        		 saveToSVGZFile(file.getPath());
+				        	 } else if (file.getName().endsWith(".svg")) {
+				        		 saveToSVGFile(file.getPath());
+				        	 } else if (fcSave.getFileFilter().getDescription().equals("Archivo SVGZ (SVG Comprimido)")) {
+				        		 saveToSVGZFile( file.getPath()+".svgz" );
+				        	 } else if (fcSave.getFileFilter().getDescription().equals("Archivo PNG")) {
+				        		 saveToPNGFile( file.getPath()+".png" );
+				        	 } else {
+				        		 saveToSVGFile(file.getPath()+".svg");
+				        	 }				             
+				        }
+						
+					}
+				});		
+		m1.add(mi12);
+		JMenuItem mi13 = new JMenuItem("Cerrar");
+		m1.add(mi13);
+		JMenuItem mi14 = new JMenuItem("Salir");
+		m1.add(mi14);
+		mi14.addActionListener(
+			new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					SVGViewFrame.this.dispose();
+					System.gc();
+					System.exit(0);
+				}
+			}
+		);
+		
+		JMenu m2 = new JMenu("Ver");
+		m2.setMnemonic('v');
+		this.mb.add(m2);
+		
+		JMenuItem m21 = new JMenuItem("Tamaño Original");
+		m2.add(m21);
+		m21.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						AffineTransform reset = new AffineTransform();
+						SVGViewFrame.this.svgCanvas.setRenderingTransform(reset);
+					}
+				}
+			);
+		
+		JMenuItem m22 = new JMenuItem("Zoom 2x");
+		m2.add(m22);
+		m22.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+//						SvgViewFrame.this.jsvgscp.getCanvas().
+						AffineTransform zoom = new AffineTransform(2, 0, 0, 2, 0, 0);
+						SVGViewFrame.this.svgCanvas.setRenderingTransform(zoom);
+					}
+				}
+			);		
+		
+		JMenuItem m23 = new JMenuItem("Zoom 4x");
+		m2.add(m23);
+		m23.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						AffineTransform zoom = new AffineTransform(4, 0, 0, 4, 0, 0);
+						SVGViewFrame.this.svgCanvas.setRenderingTransform(zoom);
+					}
+				}
+			);		
+		
+		JMenuItem m24 = new JMenuItem("Zoom Fit");
+		m2.add(m24);
+		m24.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						Dimension dTotal = SVGViewFrame.this.diagramSize;
+						Dimension dVista = SVGViewFrame.this.jsp.getVisibleRect().getSize();
+						double escala = Math.min(dVista.getWidth()/dTotal.getWidth(), dVista.getHeight()/dTotal.getHeight() );
+						AffineTransform zoom = new AffineTransform();
+						zoom.scale(escala, escala);
+						SVGViewFrame.this.svgCanvas.setRenderingTransform(zoom);
+					}
+				}
+			);	
+		
+		this.setJMenuBar(this.mb);
+	}
+    
+	public String getPrevPath() {
+		return prevPath==null?".":prevPath;
+	}
+
+	public void setPrevPath(String prevPath) {
+		this.prevPath = prevPath;
+	}
+
+	private void saveToPNGFile (String file) {
+		try {
+			PNGTranscoder transcoder = new PNGTranscoder();
+			TranscoderInput input = new TranscoderInput(svgCanvas.getSVGDocument());
+			OutputStream ostream;
+			ostream = new FileOutputStream( file );
+			TranscoderOutput output = new TranscoderOutput(ostream);
+			transcoder.transcode(input, output);
+		} catch (FileNotFoundException e1) {
+			System.err.println( file + " not found!!!!");
+			e1.printStackTrace();
+		} catch (TranscoderException e) {		
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void saveToSVGFile (String file) {
+		FileWriter f=null;
+	    try {	    	
+	        // Create the necessary ***IO facilities
+	        f = new FileWriter (file);	        
+            PrintWriter writer = new PrintWriter (file, "Unicode");
+            // Get the created document from the canvas
+            SVGDocument svgDoc = svgCanvas.getSVGDocument();
+            svgDoc.normalize();
+            // And here our SVG content is actually being
+            // written to a file
+            DOMUtilities.writeDocument (svgDoc, writer);
+            writer.close();
+            f.close();                    
+            
+
+//            Source styleSheet = new StreamSource("C:\\SVGStyle.xsl");            
+//            Transformer xformer= TransformerFactory.newInstance().newTransformer(styleSheet);            
+//            Source source=new DOMSource(svgDoc);
+//            Result result=new StreamResult(new FileWriter (file + ".htm"));            
+//            xformer.transform(source, result);
+            
+            ////////
+        } catch (IOException ioe) {
+            System.err.println("IO problem: " + ioe.toString());
+        } 
+//        catch (TransformerException e) {
+//        	System.err.println("TransformerException problem: " + e.toString());
+//        }
+
+    
+	}
+
+	private void saveToSVGZFile (String outFilename) {
+//		FileWriter f=null;
+	    try {	    	            
+            GZIPOutputStream out = new GZIPOutputStream(            						
+            						new FileOutputStream(
+            								outFilename
+            								));
+            
+            OutputStreamWriter osw = new OutputStreamWriter(out , "Unicode");
+            PrintWriter writer = new PrintWriter (osw);//PrintWriter (out, "Unicode");            
+            
+            // Get the created document from the canvas
+            SVGDocument svgDoc = svgCanvas.getSVGDocument();
+
+            // And here our SVG content is actually being
+            // written to a file
+            DOMUtilities.writeDocument (svgDoc, writer);
+
+            writer.close();
+//            f.close();
+        } catch (IOException ioe) {
+            System.err.println("IO problem: " + ioe.toString());
+        } 
+    
+	}
+	
+	private void setSVGCanvasListeners(){
+		svgCanvas.addUpdateManagerListener(
+				new UpdateManagerListener(){
+
+					@Override
+					public void managerResumed(UpdateManagerEvent arg0) {
+						jsb.setStatusLabel1("managerResumed...");						
+					}
+
+					@Override
+					public void managerStarted(UpdateManagerEvent arg0) {
+						jsb.setStatusLabel1("managerStarted...");						
+					}
+
+					@Override
+					public void managerStopped(UpdateManagerEvent arg0) {
+						jsb.setStatusLabel1("managerStopped...");						
+					}
+
+					@Override
+					public void managerSuspended(UpdateManagerEvent arg0) {
+						jsb.setStatusLabel1("managerSuspended...");						
+					}
+
+					@Override
+					public void updateCompleted(UpdateManagerEvent arg0) {						
+						jsb.stopProgress();
+//						Cursor c = Cursor.WAIT_CURSOR;
+//						SVGViewFrame.this.setCursor( Cursor.DEFAULT_CURSOR  );
+					}
+
+					@Override
+					public void updateFailed(UpdateManagerEvent arg0) {
+						jsb.setStatusLabel1("updateFailed..");
+						jsb.stopProgress();
+					}
+
+					@Override
+					public void updateStarted(UpdateManagerEvent arg0) {
+						jsb.startProgress();
+						jsb.setStatusLabel1("Redrawing...");
+						
+//						SVGViewFrame.this.setCursor( Cursor.WAIT_CURSOR  );
+					}					
+				}
+		
+		);
+		
+		
+        // Set the JSVGCanvas listeners.
+        svgCanvas.addSVGDocumentLoaderListener(new SVGDocumentLoaderAdapter() {
+            public void documentLoadingStarted(SVGDocumentLoaderEvent e) {
+            	jsb.setStatusLabel1("Document Loading...");
+            	jsb.startProgress();
+            }
+            public void documentLoadingCompleted(SVGDocumentLoaderEvent e) {
+            	jsb.setStatusLabel1("Document Loaded.");
+            }
+        });
+
+        svgCanvas.addGVTTreeBuilderListener(new GVTTreeBuilderAdapter() {
+            public void gvtBuildStarted(GVTTreeBuilderEvent e) {
+            	jsb.setStatusLabel1("Build Started...");
+            }
+            public void gvtBuildCompleted(GVTTreeBuilderEvent e) {
+            	jsb.setStatusLabel1("Build Done.");                
+            }
+        });
+
+        svgCanvas.addGVTTreeRendererListener(new GVTTreeRendererAdapter() {
+            public void gvtRenderingPrepare(GVTTreeRendererEvent e) {
+            	jsb.setStatusLabel1("Rendering Started...");
+            	jsb.startProgress();            	
+            }
+            public void gvtRenderingCompleted(GVTTreeRendererEvent e) {
+            	jsb.setStatusLabel1("Rendering Completed...");
+            	jsb.stopProgress();
+            }
+        });
+        
+    	
+    	// Obtain the Window reference when it becomes available
+//        svgCanvas.addSVGLoadEventDispatcherListener (
+//             new SVGLoadEventDispatcherAdapter () {
+//               public void svgLoadEventDispatchStarted (
+//                     SVGLoadEventDispatcherEvent e) {
+//                window = svgCanvas.getUpdateManager ().
+//                     getScriptingEnvironment ().createWindow ();
+//                
+//                Element root = document.getDocumentElement ();
+//                SVGMatrix mtrx = ((SVGLocatable) root).getScreenCTM();
+//                System.out.println("" + mtrx.getA() +"-" + mtrx.getB() +"-" + mtrx.getC() +"-" + mtrx.getD() +"-" + mtrx.getE() +"-" + mtrx.getF() );
+//                mtrx.setC(2.5f);
+//                AffineTransform reset = new AffineTransform(2, 0, 0, 2, 0, 0);
+//				svgCanvas.setRenderingTransform(reset);
+//				svgCanvas.update(svgCanvas.getGraphics());
+//				mtrx = ((SVGLocatable) root).getScreenCTM();
+//                System.out.println("" + mtrx.getA() +"-" + mtrx.getB() +"-" + mtrx.getC() +"-" + mtrx.getD() +"-" + mtrx.getE() +"-" + mtrx.getF() );
+//				
+//              }
+//           }
+//        );
+	}
+
+	public static void main(String[] args) {		
+		
+		String varname;
+
+		if (System.getProperty("mrj.version") != null)
+			varname = "DYLD_LIBRARY_PATH"; // We're on a Mac.
+		else
+			varname = "LD_LIBRARY_PATH"; // We're not on a Mac.
+
+		try {
+			// 
+//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");			
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+			System.loadLibrary("sbmlj");
+			// For extra safety, check that the jar file is in the classpath.
+			Class.forName("org.sbml.libsbml.libsbml");
+		} catch (UnsatisfiedLinkError e) {
+			System.out.println( System.getenv("LD_LIBRARY_PATH") );
+			System.err
+					.println("Error: could not link with the libSBML library."
+							+ "  It is likely\nyour " + varname
+							+ " environment variable does not include\nthe"
+							+ " directory containing the libsbml library file.");
+			System.exit(1);
+		} catch (ClassNotFoundException e) {
+			System.out.println( System.getenv("LD_LIBRARY_PATH") );
+			System.err.println("Error: unable to load the file libsbmlj.jar."
+					+ "  It is likely\nyour " + varname + " environment"
+					+ " variable or CLASSPATH variable\ndoes not include"
+					+ " the directory containing the libsbmlj.jar file.");
+			System.exit(1);
+		} catch (SecurityException e) {
+			System.out.println( System.getenv("LD_LIBRARY_PATH") );
+			System.err.println("Could not load the libSBML library files due to a"
+							+ " security exception.");
+		} 
+		catch (InstantiationException e) {				
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {				
+			e.printStackTrace();
+		} catch (UnsupportedLookAndFeelException e) {				
+			e.printStackTrace();
+		}
+		
+        try {        				
+            java.awt.EventQueue.invokeAndWait(new Runnable() {
+                public void run() {
+                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/booleanEdits.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/CellPublisher/carbon.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/addingCurve2.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/msb4100057-s1_conv.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/msb4100057-mini.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/total_final_mini.xml"));                	
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/reaction03.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/components40.xml"));                	
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("/media/PRESARIO_RP/_guillermo/desarrollo/PFC/samples/catalyzedReaction1.xml"));                	
+//            		SVGViewFrame svf = new SVGViewFrame(new SVGController("/home/guille/CellDesigner4.1/samples/components41.xml"));
+//            		SVGViewFrame svf = new SVGViewFrame(new SVGController("/home/guille/CellDesigner4.0/samples/components40.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("e:\\_gfl\\PFC\\components40.xml"));
+//                	SVGViewFrame svf = new SVGViewFrame(new SVGController("c:\\SimpleSBML.xml"));
+//            		SVGViewFrame svf = new SVGViewFrame(new SVGController("c:\\msb4100014-sd1.xml"));
+                	svf.addWindowListener( new WindowListener() {
+
+						@Override
+						public void windowOpened(WindowEvent e) {
+							// TODO Auto-generated method stub							
+						}
+
+						@Override
+						public void windowClosing(WindowEvent e) {							
+						}
+
+						@Override
+						public void windowClosed(WindowEvent e) {
+							System.exit(0);
+						}
+
+						@Override
+						public void windowIconified(WindowEvent e) {
+							// TODO Auto-generated method stub							
+						}
+
+						@Override
+						public void windowDeiconified(WindowEvent e) {
+							// TODO Auto-generated method stub
+							
+						}
+
+						@Override
+						public void windowActivated(WindowEvent e) {
+							// TODO Auto-generated method stub							
+						}
+
+						@Override
+						public void windowDeactivated(WindowEvent e) {
+							// TODO Auto-generated method stub							
+						}
+                		
+                	});
+                	svf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            		svf.setVisible(true);
+            		
+            		
+//            		svf.setNewController(new SVGController("c:\\components40.xml"));
+                }
+            });            
+        } catch (Exception ex) {
+        	ex.printStackTrace();
+        }
+		
+	}
+}

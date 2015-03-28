@@ -1,0 +1,240 @@
+package celldesignerparse_4_0.annotation;
+
+import java.awt.Dimension;
+import java.util.Vector;
+
+import org.sbml.libsbml.XMLNode;
+
+import celldesignerparse_4_0.annotation.listOfAntiSenseRNAs.AntiSenseRNA;
+import celldesignerparse_4_0.annotation.listOfCompartmentAliases.CompartmentAlias;
+import celldesignerparse_4_0.annotation.listOfGenes.Gene;
+import celldesignerparse_4_0.annotation.listOfIncludedSpecies.Specie;
+import celldesignerparse_4_0.annotation.listOfProteins.Protein;
+import celldesignerparse_4_0.annotation.listOfRNAs.RNA;
+import celldesignerparse_4_0.annotation.listOfSpeciesAliases.SpeciesAlias;
+import celldesignerparse_4_0.commondata.Entity;
+
+public class CellDesignerAnnotation extends XMLNode{
+	private String modelVersion;
+	private Dimension modelDisplay;
+	private Vector<Specie> listOfIncludedSpecies;
+	private Vector<CompartmentAlias> listOfCompartmentAliases;
+	private Vector<SpeciesAlias> listOfComplexSpeciesAliases;
+	private Vector<SpeciesAlias> listOfSpeciesAliases;
+	private Vector<Protein> listOfProteins;
+	private Vector<Gene> listOfGenes;
+	private Vector<RNA> listOfRNAs;
+	private Vector<AntiSenseRNA> listOfAntiSenseRNAs;
+	
+	public CellDesignerAnnotation(XMLNode annotation) {
+		super(annotation);
+		initializeFields();
+	}
+
+	private void initializeFields() {
+		XMLNode cellDesignerElementsParent;
+		if ( this.getChild(0).getName().equals("extension") ) {
+			cellDesignerElementsParent = this.getChild(0);
+		} else {
+			cellDesignerElementsParent = this;
+		}
+			
+			
+		for (int i=0;i<cellDesignerElementsParent.getNumChildren();i++){
+			if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("modelVersion")==0){
+				modelVersion = cellDesignerElementsParent.getChild(i).getChild(0).toString();
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("modelDisplay")==0){
+				modelDisplay = new Dimension(Integer.parseInt(cellDesignerElementsParent.getChild(i).getAttributes().getValue("sizeX")),
+						Integer.parseInt(cellDesignerElementsParent.getChild(i).getAttributes().getValue("sizeY")));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfIncludedSpecies")==0){
+				inicializeListOfIncludedSpecies(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfCompartmentAliases")==0){
+				inicializeListOfCompartmentAliases(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfComplexSpeciesAliases")==0){
+				inicializeListOfComplexSpeciesAliases(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfSpeciesAliases")==0){
+				inicializeListOfSpeciesAliases(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfProteins")==0){
+				inicializeListOfProteins(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfGenes")==0){
+				inicializeListOfGenes(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfRNAs")==0){
+				inicializeListOfRNAs(getChild(i));
+			} else if (cellDesignerElementsParent.getChild(i).getName().compareToIgnoreCase("listOfAntisenseRNAs")==0){
+				inicializeListOfAntisenseRNAs(getChild(i));
+			}
+		}
+	}
+
+	private void inicializeListOfAntisenseRNAs(XMLNode node) {
+		listOfAntiSenseRNAs = new Vector<AntiSenseRNA>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfAntiSenseRNAs.addElement(new AntiSenseRNA(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfRNAs(XMLNode node) {
+		listOfRNAs = new Vector<RNA>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfRNAs.addElement(new RNA(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfGenes(XMLNode node) {
+		listOfGenes = new Vector<Gene>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfGenes.addElement(new Gene(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfProteins(XMLNode node) {
+		listOfProteins = new Vector<Protein>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfProteins.addElement(new Protein(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfSpeciesAliases(XMLNode node) {
+		listOfSpeciesAliases = new Vector<SpeciesAlias>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfSpeciesAliases.addElement(new SpeciesAlias(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfComplexSpeciesAliases(XMLNode node) {
+		listOfComplexSpeciesAliases = new Vector<SpeciesAlias>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfComplexSpeciesAliases.addElement(new SpeciesAlias(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfCompartmentAliases(XMLNode node) {
+		listOfCompartmentAliases = new Vector<CompartmentAlias>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfCompartmentAliases.addElement(new CompartmentAlias(node.getChild(i)));
+		}
+	}
+
+	private void inicializeListOfIncludedSpecies(XMLNode node){
+		listOfIncludedSpecies = new Vector<Specie>();
+		for (int i=0;i<node.getNumChildren();i++){
+			listOfIncludedSpecies.addElement(new Specie(node.getChild(i)));
+		}
+	}
+	
+	public String getVersion(){
+		return modelVersion;
+	}
+	
+	public Dimension getDimension(){
+		return modelDisplay;
+	}
+	
+	public Vector<Specie> getListOfIncludedSpecies(){
+		return listOfIncludedSpecies;
+	}
+	
+	public Vector<CompartmentAlias> getListOfCompartmentAliases(){
+		return listOfCompartmentAliases;
+	}
+	
+	public Vector<SpeciesAlias> getListOfComplexSpeciesAliases(){
+		return listOfComplexSpeciesAliases;
+	}
+	
+	public Vector<SpeciesAlias> getListOfSimpleSpeciesAliases(){
+		return listOfSpeciesAliases;
+	}
+	
+	public Vector<Protein> getListOfProteins(){
+		return listOfProteins;
+	}
+	
+	public Vector<Gene> getListOfGenes(){
+		return listOfGenes;
+	}
+	
+	public Vector<RNA> getListOfRNAs(){
+		return listOfRNAs;
+	}
+	
+	public Vector<AntiSenseRNA> getListOfAntiSenseRNAs(){
+		return listOfAntiSenseRNAs;
+	}
+	
+	public String toStringSpecial(){
+		String result ="";/*= "version: "+getVersion()+"\ndimension: "+getDimension()+"\n";
+		for (Specie s:getListOfIncludedSpecies()){
+			result+=s.toString();
+		}
+		for (CompartmentAlias ca:listOfCompartmentAliases){
+			result+=ca.toString();
+		}
+		for (SpeciesAlias sa : getListOfComplexSpeciesAliases()){
+			result+=sa.toString();
+		}
+		for (SpeciesAlias sa : getListOfSpeciesAliases()){
+			result+=sa.toString();
+		}
+		for (Protein p : getListOfProteins()){
+			result+=p.toString();
+		}*/
+		for (Gene e : getListOfGenes()){
+			result+=e.toString();
+		}
+		for (RNA e : getListOfRNAs()){
+			result+=e.toString();
+		}
+		for (AntiSenseRNA e : getListOfAntiSenseRNAs()){
+			result+=e.toString();
+		}
+		return result;
+	}
+
+	public Protein getProtein(String id) {
+		for (Protein p : getListOfProteins()){
+			if (p.getId().compareToIgnoreCase(id)==0){
+				return p;
+			}
+		}
+		return null;
+	}
+	
+	public Gene getGene(String id) {
+		for (Gene g : getListOfGenes()){
+			if (g.getId().compareToIgnoreCase(id)==0){
+				return g;
+			}
+		}
+		return null;
+	}
+	
+	public RNA getRNA(String id) {
+		for (RNA r : getListOfRNAs()){
+			if (r.getId().compareToIgnoreCase(id)==0){
+				return r;
+			}
+		}
+		return null;
+	}
+	
+	public AntiSenseRNA getAntiSenseRNA(String id) {
+		for (AntiSenseRNA r : getListOfAntiSenseRNAs()){
+			if (r.getId().compareToIgnoreCase(id)==0){
+				return r;
+			}
+		}
+		return null;
+	}
+
+	public Specie getSpeciesIncluded(String id) {
+		for (Specie s : listOfIncludedSpecies){
+			//System.out.println("CellDAnnotation->getSpeciesIncluded: "+s.getId()+" "+id);
+			if (s.getId().compareToIgnoreCase(id)==0){
+				return s;
+			}
+		}
+		return null;
+	}
+	
+}

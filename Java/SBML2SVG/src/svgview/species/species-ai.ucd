@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="species-ai" foregroundRGB="255,255,255" id="{UMLID=_eFkZwNgvEdy9nKQdMTLpeg,JavaID=svgview.species}" metadata="uml2-1.0" initialized="true" scrolledX="503" scrolledY="280" tag="1000" key="3230303730363239204E7565766F4170706C65744B6974616E6F2F6775696C6C65">
+  <children xsi:type="editmodel:ClassEditModel" name="SVGSpecieFactory" location="50,1237" size="159,65" id="{UMLID=_WE_skNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecieFactory}" runTimeClassModel="createSVGSpecie(Lorg.w3c.dom.Document;Lmodel.specie.MSpecies;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="127,18">
+      <children xsi:type="editmodel:MethodEditModel" name="createSVGSpecie" id="{UMLID=_WFIPcNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecieFactory#createSVGSpecie(Lorg.w3c.dom.Document;Lmodel.specie.MSpecies;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGDegraded" location="1293,287" size="131,232" id="{UMLID=_WMeNkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded}" runTimeClassModel="bounds,getSlash,getBBox,svgDoc,SVGDegraded,md,getSVGShape,svgPaint,getDocument,getCircle">
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,59">
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WMwhcNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="md" id="{UMLID=_WMxvkNiSEdyUjZMuDLaFDA,JavaID=model.specie/MDegraded@md+svgview.species/SVGDegraded@ownedEnd|model.specie/MDegraded#md}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WMxIgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGDegraded" id="{UMLID=_WNBAIdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#SVGDegraded}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WMyWoNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCircle" id="{UMLID=_WM0L0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#getCircle}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WM8HoNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WM_yANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSlash" id="{UMLID=_WM32MdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#getSlash}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WM980NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WMgp0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGDegraded->svgview.species/SVGSpecie}" source="//@children.1" target="//@children.4/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGReceptor" location="792,730" size="178,394" id="{UMLID=_WWeeINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor}" runTimeClassModel="getPolygon(DDDD),mr,getDashedPolygonOld(DDDD),HOMODIMER_WIDTH,HOMODIMER_HEIGHT,getSVGShape(),ACTIVITY_MARGIN_INNER,getDashedPolygon(DDDD),getDocument(),svgDoc,getAngleOnPolygon(Ljava.awt.geom.Rectangle2D.Double;D),ACTIVITY_MARGIN,getSVGShapeOld(),active,svgPaint(Lorg.w3c.dom.Element;),SVGReceptor(Lorg.w3c.dom.Document;Lmodel.specie.protein.MReceptor;),getPolygonOld(DDDD),getDashedFillOld(DDDD),buildSVGShape(),getAngleOnRect(Ljava.awt.geom.Rectangle2D;D),getDashedFill(DDDD)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="157,131">
+      <children xsi:type="editmodel:AttributeEditModel" name="ACTIVITY_MARGIN" id="{UMLID=_WlnGUNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#ACTIVITY_MARGIN}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ACTIVITY_MARGIN_INNER" id="{UMLID=_Wlr-0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#ACTIVITY_MARGIN_INNER}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_HEIGHT" id="{UMLID=_WlrXwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#HOMODIMER_HEIGHT}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_WIDTH" id="{UMLID=_Wlo7gNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#HOMODIMER_WIDTH}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="active" id="{UMLID=_WlqJoNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#active}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mr" id="{UMLID=_Wll4MNiSEdyUjZMuDLaFDA,JavaID=model.specie.protein/MReceptor@mr+svgview.species/SVGReceptor@ownedEnd|model.specie.protein/MReceptor#mr}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_Wli04NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,216">
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WltM8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#svgPaint(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPolygonOld" id="{UMLID=_WlysgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getPolygonOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect" id="{UMLID=_Wl6oUdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getAngleOnRect(Ljava.awt.geom.Rectangle2D;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedFill" id="{UMLID=_WmBWAdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getDashedFill(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedPolygon" id="{UMLID=_WmTC0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getDashedPolygon(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_Wl5aMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getDocument()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPolygon" id="{UMLID=_WmIDsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getPolygon(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WlwQQdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedFillOld" id="{UMLID=_WmNjQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGReceptor#getDashedFillOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="buildSVGShape" id="{UMLID=_Z3rlAOGbEdyg5aNK2IoiHA,JavaID=svgview.species/SVGReceptor#buildSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedPolygonOld" id="{UMLID=_Z3v2cOGbEdyg5aNK2IoiHA,JavaID=svgview.species/SVGReceptor#getDashedPolygonOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShapeOld" id="{UMLID=_Z4jHsOGbEdyg5aNK2IoiHA,JavaID=svgview.species/SVGReceptor#getSVGShapeOld()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" id="{UMLID=_WlApYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein&lt;-svgview.species/SVGReceptor}" source="//@children.2" target="//@children.12" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,633" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGIonChannel" location="1079,740" size="157,327" id="{UMLID=_WWco8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel}" runTimeClassModel="width,SVGIonChannel(Lorg.w3c.dom.Document;Lmodel.specie.protein.MIonChannel;),shape,getSVGShape(),getAngleOnRect(Ljava.awt.geom.Rectangle2D;DD),height,svgDoc,mic,ACTIVITY_MARGIN,getSVGShapeOld(),svgPaint(Lorg.w3c.dom.Element;),active,buildSVGShape(),y,x,getRoundedRectOld(DDDD)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="122,172">
+      <children xsi:type="editmodel:AttributeEditModel" name="ACTIVITY_MARGIN" id="{UMLID=_Wc0WsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#ACTIVITY_MARGIN}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="active" id="{UMLID=_Wc1k0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#active}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="height" id="{UMLID=_Wcx6cNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#height}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mic" id="{UMLID=_WczIkNiSEdyUjZMuDLaFDA,JavaID=model.specie.protein/MIonChannel@mic+svgview.species/SVGIonChannel@ownedEnd|model.specie.protein/MIonChannel#mic}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WcyhgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#svgDoc}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="width" id="{UMLID=_Wc09wNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#width}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="x" id="{UMLID=_Wc2y8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#x}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="y" id="{UMLID=_Wc2L4NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#y}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="shape" id="{UMLID=_98QXwOGhEdyg5aNK2IoiHA,JavaID=svgview.shape/SVGShape@shape+svgview.species/SVGIonChannel@ownedEnd|svgview.shape/SVGShape#shape}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,108">
+      <children xsi:type="editmodel:MethodEditModel" name="buildSVGShape" id="{UMLID=_Wc5PMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#buildSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoundedRectOld" id="{UMLID=_WdGDgdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#getRoundedRectOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect" id="{UMLID=_WdLjENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#getAngleOnRect(Ljava.awt.geom.Rectangle2D;DD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WdSQwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#getSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGIonChannel" id="{UMLID=_Wc3aANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIonChannel#SVGIonChannel(Lorg.w3c.dom.Document;Lmodel.specie.protein.MIonChannel;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShapeOld" id="{UMLID=_9-LqYOGhEdyg5aNK2IoiHA,JavaID=svgview.species/SVGIonChannel#getSVGShapeOld()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" id="{UMLID=_WcXqwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein&lt;-svgview.species/SVGIonChannel}" source="//@children.3" target="//@children.12" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,45" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="164,375" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGIon" location="50,287" size="153,268" id="{UMLID=_WQ7PwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon}" runTimeClassModel="mion,bounds,getBBox,svgDoc,getSVGShape,SVGIon,HOMODIMER_WIDTH,svgPaint,HOMODIMER_HEIGHT,getCircle,getDocument,getRect">
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,95">
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_HEIGHT" id="{UMLID=_WRM8kNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#HOMODIMER_HEIGHT}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_WIDTH" id="{UMLID=_WRMVgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#HOMODIMER_WIDTH}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WRKgUNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mion" id="{UMLID=_WRLHYNiSEdyUjZMuDLaFDA,JavaID=model.specie/MIon@mion+svgview.species/SVGIon@ownedEnd|model.specie/MIon#mion}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WRLucNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGIon" id="{UMLID=_WRURUdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#SVGIon}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WRZw4NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCircle" id="{UMLID=_WRbmENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#getCircle}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WRScIdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRect" id="{UMLID=_WROKsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#getRect}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WRWtkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WRX7sdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" targetConnections="//@children.7/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.10/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.12/@sourceConnections.0 //@children.1/@sourceConnections.0 //@children.11/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_WQ9sANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGIon->svgview.species/SVGSpecie}" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,187" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGRNA" location="628,287" size="150,327" id="{UMLID=_WqPHoNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA}" runTimeClassModel="getCenter(),shape,getSVGShape(),bounds,center,SVGRNA(Lorg.w3c.dom.Document;Lmodel.specie.MRNA;),getDocument(),svgDoc,getBBox(),getSlantedRectOld(DDDD),getSVGShapeOld(),mrna,svgPaint(Lorg.w3c.dom.Element;),getSlantedRect(DDDD),buildSVGShape()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,100">
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WqdKENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mrna" id="{UMLID=_Wqe_QNiSEdyUjZMuDLaFDA,JavaID=model.specie/MRNA@mrna+svgview.species/SVGRNA@ownedEnd|model.specie/MRNA#mrna}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WqeYMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#svgDoc}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="center" id="{UMLID=_VQDZkP6aEdyIldVErEtpIA,JavaID=svgview.species/SVGRNA#center}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="shape" id="{UMLID=_VQFOwP6aEdyIldVErEtpIA,JavaID=svgview.shape/SVGShape@shape+svgview.species/SVGRNA@ownedEnd|svgview.shape/SVGShape#shape}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,180">
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WqhbgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#svgPaint(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_Wqls8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#getBBox()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WquP0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#getDocument()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WqgNYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#getSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSlantedRect" id="{UMLID=_WqoJMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#getSlantedRect(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGRNA" id="{UMLID=_Wqj3wdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA#SVGRNA(Lorg.w3c.dom.Document;Lmodel.specie.MRNA;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSlantedRectOld" id="{UMLID=_VQT4QP6aEdyIldVErEtpIA,JavaID=svgview.species/SVGRNA#getSlantedRectOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="buildSVGShape" id="{UMLID=_VQZ-4P6aEdyIldVErEtpIA,JavaID=svgview.species/SVGRNA#buildSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShapeOld" id="{UMLID=_VQb0EP6aEdyIldVErEtpIA,JavaID=svgview.species/SVGRNA#getSVGShapeOld()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCenter" id="{UMLID=_VQdCMP6aEdyIldVErEtpIA,JavaID=svgview.species/SVGRNA#getCenter()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WqSK8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGRNA->svgview.species/SVGSpecie}" source="//@children.5" target="//@children.4/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0" name="SVGSpecie" location="770,50" size="153,187" id="{UMLID=_WFW48NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecie}" runTimeClassModel="getCenter(),getDocument(),getBBox(),HOMODIMER_WIDTH,HOMODIMER_HEIGHT,getSVGShape()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_HEIGHT" id="{UMLID=_WH8S4NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecie#HOMODIMER_HEIGHT}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_WIDTH" id="{UMLID=_WH6dsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecie#HOMODIMER_WIDTH}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WH_9QdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecie#getBBox()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_hWaKQNjxEdybt_KbWlDTjg,JavaID=svgview.species/SVGSpecie#getDocument()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WIBLYdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSpecie#getSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCenter" id="{UMLID=_BnJjwVXjEd2cUoJwGP_HsQ,JavaID=svgview.species/SVGSpecie#getCenter()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGSimpleMolecule" location="233,287" size="171,214" id="{UMLID=_WsmfINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule}" runTimeClassModel="bounds,getBBox,svgDoc,getSVGShape,svgPaint,SVGSimpleMolecule,svgNS,msm,getDocument">
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,77">
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_Ws5aENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="msm" id="{UMLID=_Ws7PQNiSEdyUjZMuDLaFDA,JavaID=model.specie/MSimpleMolecule@msm+svgview.species/SVGSimpleMolecule@ownedEnd|model.specie/MSimpleMolecule#msm}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_Ws6BINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#svgDoc}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgNS" id="{UMLID=_Ws6oMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#svgNS}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,90">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGSimpleMolecule" id="{UMLID=_WtB88NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#SVGSimpleMolecule}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_Ws9rgNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_Ws8dYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WtEZMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_Ws_gsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_Wso7YNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGSimpleMolecule->svgview.species/SVGSpecie}" source="//@children.7" target="//@children.4/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="85,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGComplex" location="952,287" size="151,250" id="{UMLID=_WJEUQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex}" runTimeClassModel="bounds,getBBox,svgDoc,getPolygon,mc,getSVGShape,SVGComplex,getDashedPolygon,svgPaint,getDocument,brief">
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,77">
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WJ728NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="brief" id="{UMLID=_WJ-6QNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#brief}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mc" id="{UMLID=_WJ-TMNiSEdyUjZMuDLaFDA,JavaID=model.specie/MSpeciesComplex@mc+svgview.species/SVGComplex@ownedEnd|model.specie/MSpeciesComplex#mc}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WJ9FENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGComplex" id="{UMLID=_WKROINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#SVGComplex}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WKNjwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedPolygon" id="{UMLID=_WKHdINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#getDashedPolygon}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WKGPANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPolygon" id="{UMLID=_WKAvcdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#getPolygon}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WJ_hUNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WKOx4diSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WJHXkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGComplex->svgview.species/SVGSpecie}" source="//@children.8" target="//@children.4/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGTruncated" location="1280,740" size="143,209" id="{UMLID=_WWdQANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated}" runTimeClassModel="getDashedRect(DDDD),SVGTruncated(Lorg.w3c.dom.Document;Lmodel.specie.protein.MTruncated;),getRoundedRect(DDDD),CORNER_RADIUS,svgPaint(Lorg.w3c.dom.Element;),buildSVGShape(),getSVGShape(),getAngleOnRect(Ljava.awt.geom.Rectangle2D;D),getDashedFill(DDDD)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="122,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="CORNER_RADIUS" id="{UMLID=_WhVDQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#CORNER_RADIUS}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="120,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGTruncated" id="{UMLID=_bH9SYOGhEdyg5aNK2IoiHA,JavaID=svgview.species/SVGTruncated#SVGTruncated(Lorg.w3c.dom.Document;Lmodel.specie.protein.MTruncated;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedFill" location="825,943" id="{UMLID=_Wh2nsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#getDashedFill(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedRect" id="{UMLID=_WhYGkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#getDashedRect(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoundedRect" id="{UMLID=_WhdmINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#getRoundedRect(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_Wh0ygNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#getSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect" id="{UMLID=_WhWRYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGTruncated#getAngleOnRect(Ljava.awt.geom.Rectangle2D;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="buildSVGShape" id="{UMLID=_bIL74OGhEdyg5aNK2IoiHA,JavaID=svgview.species/SVGTruncated#buildSVGShape()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" id="{UMLID=_WhGZwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein&lt;-svgview.species/SVGTruncated}" source="//@children.9" target="//@children.12" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="164,358" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGUnknown" location="792,287" size="130,196" id="{UMLID=_WvFLYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown}" runTimeClassModel="bounds,mss,getBBox,svgDoc,SVGUnknown,getSVGShape,svgPaint,getDocument">
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,59">
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WvQxkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mss" id="{UMLID=_WvR_sNiSEdyUjZMuDLaFDA,JavaID=model.specie/MSpecies@mss+svgview.species/SVGUnknown@ownedEnd|model.specie/MSpecies#mss}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WvTN0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,90">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGUnknown" id="{UMLID=_Wvc-0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#SVGUnknown}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WvYtYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WvUb8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WvZ7gdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WvWRINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WvIOsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGUnknown->svgview.species/SVGSpecie}" source="//@children.10" target="//@children.4/@sourceConnections.0" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGPhenotype" location="1454,287" size="153,268" id="{UMLID=_WTn-cNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype}" runTimeClassModel="bounds,mp,getBBox,svgDoc,getPolygon,getSVGShape,HOMODIMER_WIDTH,svgPaint,active,HOMODIMER_HEIGHT,SVGPhenotype,getDocument">
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,113">
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_HEIGHT" id="{UMLID=_WUDcQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#HOMODIMER_HEIGHT}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_WIDTH" id="{UMLID=_WUBnENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#HOMODIMER_WIDTH}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="active" id="{UMLID=_WUC1MNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#active}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WT_K0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mp" id="{UMLID=_WUAY8NiSEdyUjZMuDLaFDA,JavaID=model.specie/MPhenotype@mp+svgview.species/SVGPhenotype@ownedEnd|model.specie/MPhenotype#mp}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WUBAANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#svgDoc}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="114,108">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGPhenotype" id="{UMLID=_WUQQkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#SVGPhenotype}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WUEDUNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#getBBox}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WUF4gNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#getDocument}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPolygon" id="{UMLID=_WUHGodiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#getPolygon}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShape" id="{UMLID=_WUObYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#getSVGShape}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WUMmMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype#svgPaint}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WTqasNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGPhenotype->svgview.species/SVGSpecie}" source="//@children.11" target="//@children.4/@sourceConnections.0" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.3/@sourceConnections.0" name="SVGProtein" location="434,287" size="164,633" id="{UMLID=_WWba0NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein}" runTimeClassModel="getBindingRegion(Lmodel.specie.protein.MBindingRegion;Ljava.awt.geom.Rectangle2D;),getCenter(),getAngleOnRect4(Ljava.awt.geom.Rectangle2D.Double;D),getDashedRectOld(DDDD),RESIDUE_RADIUS,HOMODIMER_HEIGHT,getSVGShape(),center,getRoundedRect(DDDD),getSVGShapeOld(),getAngleOnRect(Ljava.awt.geom.Rectangle2D;D),getDashedFill(DDDD),addBindingRegions(Lsvgview.shape.SVGComplexShape;Ljava.awt.geom.Rectangle2D;),getRoundedRectOld(DDDD),getDashedRect(DDDD),getResidueNew(Lmodel.specie.protein.MResidue;Ljava.awt.geom.Point2D;),mp,getResidue(Lmodel.specie.protein.MResidue;Ljava.awt.geom.Rectangle2D.Double;),HOMODIMER_WIDTH,getAngleOnRect0(Ljava.awt.geom.Rectangle2D.Double;D),shape,getAngleOnRect2(Ljava.awt.geom.Rectangle2D.Double;D),bounds,getDocument(),svgDoc,getBBox(),ACTIVITY_MARGIN,CORNER_RADIUS,svgPaint(Lorg.w3c.dom.Element;),active,getDashedFillOld(DDDD),buildSVGShape(),SVGProtein(Lorg.w3c.dom.Document;Lmodel.specie.protein.MProtein;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,208">
+      <children xsi:type="editmodel:AttributeEditModel" name="ACTIVITY_MARGIN" id="{UMLID=_WXPTINiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#ACTIVITY_MARGIN}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="CORNER_RADIUS" id="{UMLID=_WXQhQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#CORNER_RADIUS}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_HEIGHT" id="{UMLID=_WXS9gNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#HOMODIMER_HEIGHT}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HOMODIMER_WIDTH" id="{UMLID=_WXRIUNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#HOMODIMER_WIDTH}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="RESIDUE_RADIUS" id="{UMLID=_WXSWcNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#RESIDUE_RADIUS}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="active" id="{UMLID=_WXRvYNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#active}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bounds" id="{UMLID=_WXM24NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#bounds}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mp" id="{UMLID=_WXOFANiSEdyUjZMuDLaFDA,JavaID=model.specie.protein/MProtein@mp+svgview.species/SVGProtein@ownedEnd|model.specie.protein/MProtein#mp}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgDoc" id="{UMLID=_WXOsENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#svgDoc}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="shape" id="{UMLID=_rNF7gNjxEdybt_KbWlDTjg,JavaID=svgview.shape/SVGShape@shape+svgview.species/SVGProtein@ownedEnd|svgview.shape/SVGShape#shape}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="center" id="{UMLID=_LzqJEOF5Edyg5aNK2IoiHA,JavaID=svgview.species/SVGProtein#center}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,378">
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_WYcNANiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#svgPaint(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGProtein" id="{UMLID=_WYID8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#SVGProtein(Lorg.w3c.dom.Document;Lmodel.specie.protein.MProtein;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect0" id="{UMLID=_WYEZkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getAngleOnRect0(Ljava.awt.geom.Rectangle2D.Double;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect4" id="{UMLID=_WXa5UNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getAngleOnRect4(Ljava.awt.geom.Rectangle2D.Double;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getResidueNew" id="{UMLID=_WYYiodiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getResidueNew(Lmodel.specie.protein.MResidue;Ljava.awt.geom.Point2D;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBBox" id="{UMLID=_WYScAdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getBBox()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedFill" id="{UMLID=_WX_hENiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getDashedFill(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSVGShapeOld" id="{UMLID=_WYURMNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getSVGShapeOld()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedRect" id="{UMLID=_WXTkkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getDashedRect(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBindingRegion" id="{UMLID=_WX5acNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getBindingRegion(Lmodel.specie.protein.MBindingRegion;Ljava.awt.geom.Rectangle2D;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocument" id="{UMLID=_WXoUsNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getDocument()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getResidue" id="{UMLID=_WYepQNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getResidue(Lmodel.specie.protein.MResidue;Ljava.awt.geom.Rectangle2D.Double;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect" id="{UMLID=_WXqJ4NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getAngleOnRect(Ljava.awt.geom.Rectangle2D;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoundedRect" id="{UMLID=_WX0h8NiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getRoundedRect(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="buildSVGShape" id="{UMLID=_WXt0QNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#buildSVGShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedFillOld" id="{UMLID=_WXyswNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getDashedFillOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCenter" id="{UMLID=_WXZEIdiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getCenter()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAngleOnRect2" id="{UMLID=_WXnGkNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein#getAngleOnRect2(Ljava.awt.geom.Rectangle2D.Double;D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDashedRectOld" id="{UMLID=_L09JkOF5Edyg5aNK2IoiHA,JavaID=svgview.species/SVGProtein#getDashedRectOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoundedRectOld" id="{UMLID=_L1D3QOF5Edyg5aNK2IoiHA,JavaID=svgview.species/SVGProtein#getRoundedRectOld(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addBindingRegions" id="{UMLID=_eDkTcOGXEdyg5aNK2IoiHA,JavaID=svgview.species/SVGProtein#addBindingRegions(Lsvgview.shape.SVGComplexShape;Ljava.awt.geom.Rectangle2D;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WWkkwNiSEdyUjZMuDLaFDA,JavaID=svgview.species/SVGProtein->svgview.species/SVGSpecie}" source="//@children.12" target="//@children.4/@sourceConnections.0" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=3"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

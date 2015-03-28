@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-docs-1.7.zip"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-rasterizer.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-slideshow.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-squiggle.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-svgpp.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik-ttf2svg.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/batik-1.7/batik.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/commons-fileupload-1.2.2/lib/commons-fileupload-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/commons-io-2.0.1-bin.zip"/>
+	<classpathentry kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/y.jar"/>
+	<classpathentry kind="lib" path="/Users/guille/_guillermo/desarrollo/PFC/_jar/jsbml-0.8-b2-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="/usr/local/share/java/libsbmlj.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

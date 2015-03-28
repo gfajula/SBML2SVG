@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="shape-aid" foregroundRGB="255,255,255" id="{UMLID=_eIqxENgvEdy9nKQdMTLpeg,JavaID=svgview.shape}" metadata="uml2-1.0" initialized="true" scrolledX="358" scrolledY="-15" tag="1000" key="3230303730363239204E7565766F4170706C65744B6974616E6F2F6775696C6C65">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.6/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.2/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.3/@sourceConnections.0" name="Segment" location="10,400" size="123,155" id="{UMLID=_Gd5vcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment}" runTimeClassModel="main([Ljava.lang.String;),getSlope(),Segment(DDDD),getLongitude(),Segment(Ljava.awt.geom.Point2D;Ljava.awt.geom.Point2D;),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Segment" id="{UMLID=_Ggd7QNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#Segment(Ljava.awt.geom.Point2D;Ljava.awt.geom.Point2D;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Segment" id="{UMLID=_GgM1gNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#Segment(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLongitude" id="{UMLID=_GfbZcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#getLongitude()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSlope" id="{UMLID=_GgJyMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#getSlope()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_GgVYYNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_Ggja0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment#main([Ljava.lang.String;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="{UMLID=_HN8FQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment@s+svgview.shape/SVGLine@ownedEnd}" source="//@children.0" target="//@children.9" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="501,544" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="s" location="103,155" id="{UMLID=_HKaQINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment@s+svgview.shape/SVGLine@ownedEnd|svgview.shape/Segment#s}" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name="- s" location="88,562" size="18,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="120,562" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" id="{UMLID=_HN8FQdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment@s+svgview.shape/SVGLine@ownedEnd|svgview.shape/SVGLine#ownedEnd}"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.6/@sourceConnections.1" name="SVGShape" location="590,-10" size="126,169" id="{UMLID=_Glvc0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape}" runTimeClassModel="THRESHOLD,composeWith(Lsvgview.shape.SVGShape;),svgPaint(Lorg.w3c.dom.Element;),svgNS,setAttribute(Ljava.lang.String;Ljava.lang.String;),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="THRESHOLD" id="{UMLID=_GmMIwNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#THRESHOLD}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgNS" id="{UMLID=_GmNW4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#svgNS}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="105,72">
+      <children xsi:type="editmodel:MethodEditModel" name="composeWith" id="{UMLID=_GmUroNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#composeWith(Lsvgview.shape.SVGShape;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_GmY9ENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAttribute" id="{UMLID=_GmPMENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#setAttribute(Ljava.lang.String;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_GmgR0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_GnJyEtgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape->svgview.shape/Segment}" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="610,270" size="122,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,169" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,10"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_Gt5TQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape@components+svgview.shape/SVGComplexShape@ownedEnd}" source="//@children.1" target="//@children.6" targetEnd="//@children.1/@sourceConnections.1/@children.2" label="//@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="610,197" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="components" location="10,169" id="{UMLID=_GpVjYNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape@components+svgview.shape/SVGComplexShape@ownedEnd|svgview.shape/SVGShape#components}" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" # components" location="607,166" size="71,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="587,166" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="166,10" id="{UMLID=_Gt5TQdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape@components+svgview.shape/SVGComplexShape@ownedEnd|svgview.shape/SVGComplexShape#ownedEnd}"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGCircle" location="701,546" size="117,245" id="{UMLID=_GvJQcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle}" runTimeClassModel="main([Ljava.lang.String;),getR(),getCy(),r,getCx(),svgPaint(Lorg.w3c.dom.Element;),cy,cx,SVGCircle(DDDLjava.lang.String;),SVGCircle(DDD),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="41,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="cx" id="{UMLID=_GzzuANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#cx}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cy" id="{UMLID=_Gzyf4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#cy}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="r" id="{UMLID=_GzwqsNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#r}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,144">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGCircle" id="{UMLID=_G0RoENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#SVGCircle(DDDLjava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGCircle" id="{UMLID=_Gz8Q4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#SVGCircle(DDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCx" id="{UMLID=_Gz3_cNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#getCx()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCy" id="{UMLID=_G0iGwNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#getCy()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getR" id="{UMLID=_Gz1jMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#getR()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_G0lxINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_G0JsQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#main([Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_G0cAINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_G4Xd4tgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle->svgview.shape/Segment}" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="378,522" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,4" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,150"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_GzeW0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGCircle}" source="//@children.2" target="//@children.3/@sourceConnections.1" targetEnd="//@children.2/@sourceConnections.1/@children.1" sourceEnd="//@children.2/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_G3wZ4dgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGCircle->svgview.shape/SVGSimpleShape}" source="//@children.2" target="//@children.5" targetEnd="//@children.2/@sourceConnections.2/@children.2" label="//@children.2/@sourceConnections.2/@children.0" sourceEnd="//@children.2/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="808,452" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="18,155"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.3" name="SVGEllipse" location="250,591" size="117,191" id="{UMLID=_GvP-INgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse}" runTimeClassModel="svgPaint(Lorg.w3c.dom.Element;),cy,cx,SVGEllipse(DDDD),rx,SVGEllipse(DDDDLjava.lang.String;),intersection(Lsvgview.shape.Segment;),ry">
+    <children xsi:type="editmodel:CompartmentEditModel" size="41,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="cx" id="{UMLID=_HOoo0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#cx}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cy" id="{UMLID=_HOmzoNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#cy}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rx" id="{UMLID=_HOp28NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#rx}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ry" id="{UMLID=_HOrsINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#ry}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,72">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGEllipse" id="{UMLID=_HPCRcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#SVGEllipse(DDDDLjava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGEllipse" id="{UMLID=_HOs6QNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#SVGEllipse(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_HO68sNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_HO1dINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HRz4odgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse->svgview.shape/Segment}" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="148,573" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="113,155"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.7/@sourceConnections.2 //@children.8/@sourceConnections.1 //@children.2/@sourceConnections.1 //@children.9/@sourceConnections.1 //@children.4/@sourceConnections.1" size="2,1" id="{UMLID=_HOMj8NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGEllipse}" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="117,20" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,145" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HRehcdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGEllipse->svgview.shape/SVGSimpleShape}" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.2/@children.2" label="//@children.3/@sourceConnections.2/@children.0" sourceEnd="//@children.3/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="508,573" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="117,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,155"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGRectangle" location="995,546" size="132,281" id="{UMLID=_GvNh4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle}" runTimeClassModel="main([Ljava.lang.String;),width,intersection(Lsvgview.shape.Segment;),SVGRectangle(DDDDDD),height,SVGRectangle(DDDDDDLjava.lang.String;),svgPaint(Lorg.w3c.dom.Element;),SVGRectangle(DDDD),rx,y,SVGRectangle(DDDDLjava.lang.String;),ry,x">
+    <children xsi:type="editmodel:CompartmentEditModel" size="58,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="height" id="{UMLID=_HD2VINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#height}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rx" id="{UMLID=_HD5YcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#rx}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ry" id="{UMLID=_HD70sNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#ry}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="width" id="{UMLID=_HD4KUNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#width}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="x" id="{UMLID=_HD9p4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#x}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="y" id="{UMLID=_HD6mkNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#y}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="111,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGRectangle" id="{UMLID=_HD-4ANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#SVGRectangle(DDDDLjava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGRectangle" id="{UMLID=_HESaANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#SVGRectangle(DDDDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGRectangle" id="{UMLID=_HE2asNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#SVGRectangle(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGRectangle" id="{UMLID=_HEi4sNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#SVGRectangle(DDDDDDLjava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_HELFQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_HEfOUNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#main([Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_HExiMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HIPs8dgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle->svgview.shape/Segment}" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="525,522" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,4" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,150"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_HDTikNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGRectangle}" source="//@children.4" target="//@children.3/@sourceConnections.1" targetEnd="//@children.4/@sourceConnections.1/@children.1" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HH8K8NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle->svgview.shape/SVGSimpleShape}" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.2/@children.2" label="//@children.4/@sourceConnections.2/@children.0" sourceEnd="//@children.4/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="890,528" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,155"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HHPAUdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGRectangle->svgview.shape/SVGEllipse}" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.3/@children.2" label="//@children.4/@sourceConnections.3/@children.0" sourceEnd="//@children.4/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="642,658" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,140" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="117,95"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.1 //@children.2/@sourceConnections.2 //@children.8/@sourceConnections.2 //@children.7/@sourceConnections.3 //@children.4/@sourceConnections.2 //@children.9/@sourceConnections.2 //@children.3/@sourceConnections.2" name="SVGSimpleShape" location="780,230" size="154,155" id="{UMLID=_GvICUNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape}" runTimeClassModel="addAttributes(Lorg.w3c.dom.Element;),composeWith(Lsvgview.shape.SVGShape;),svgPaint(Lorg.w3c.dom.Element;),attributes,setAttribute(Ljava.lang.String;Ljava.lang.String;),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="attributes" id="{UMLID=_Gv10ANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#attributes}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="105,90">
+      <children xsi:type="editmodel:MethodEditModel" name="addAttributes" id="{UMLID=_GwIH4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#addAttributes(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="composeWith" id="{UMLID=_Gv3pMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#composeWith(Lsvgview.shape.SVGShape;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_GwBaMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAttribute" id="{UMLID=_GwLLMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#setAttribute(Ljava.lang.String;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_Gv8hsNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_GyEBkdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape->svgview.shape/Segment}" source="//@children.5" target="//@children.0" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="396,347" size="122,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,145" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="113,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_GvZvINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape->svgview.shape/SVGShape}" source="//@children.5" target="//@children.6/@sourceConnections.1" targetEnd="//@children.5/@sourceConnections.1/@children.1" sourceEnd="//@children.5/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_GyXjkNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape->svgview.shape/SVGComplexShape}" source="//@children.5" target="//@children.6" targetEnd="//@children.5/@sourceConnections.2/@children.2" label="//@children.5/@sourceConnections.2/@children.0" sourceEnd="//@children.5/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="569,284" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,82" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="166,72"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1 //@children.5/@sourceConnections.2 //@children.7/@sourceConnections.1" name="SVGComplexShape" location="270,240" size="166,250" id="{UMLID=_Go--ENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape}" runTimeClassModel="add(Lsvgview.shape.SVGShape;),main([Ljava.lang.String;),SVGComplexShape(),addAttributes(Lorg.w3c.dom.Element;),SVGComplexShape(Lsvgview.shape.SVGShape;),composeWith(Lsvgview.shape.SVGShape;),svgPaint(Lorg.w3c.dom.Element;),attributes,components,setAttribute(Ljava.lang.String;Ljava.lang.String;),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="94,41">
+      <children xsi:type="editmodel:AttributeEditModel" name="attributes" id="{UMLID=_GpeGQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#attributes}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="components" id="{UMLID=_GpVjYNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGShape@components+svgview.shape/SVGComplexShape@ownedEnd|svgview.shape/SVGShape#components}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,162">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGComplexShape" id="{UMLID=_GpzdcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#SVGComplexShape(Lsvgview.shape.SVGShape;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGComplexShape" id="{UMLID=_GqDVENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#SVGComplexShape()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" id="{UMLID=_GqEjMNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#add(Lsvgview.shape.SVGShape;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAttributes" id="{UMLID=_Gp8AUNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#addAttributes(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="composeWith" id="{UMLID=_Gp2gwNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#composeWith(Lsvgview.shape.SVGShape;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_GppFYNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_GpvzENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#main([Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAttribute" id="{UMLID=_Gp_DoNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#setAttribute(Ljava.lang.String;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_Gpjl0NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_GszuIdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape->svgview.shape/Segment}" source="//@children.6" target="//@children.0" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="163,417" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,205" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,45"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" targetConnections="//@children.5/@sourceConnections.1" size="2,1" id="{UMLID=_GpD2kNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGComplexShape->svgview.shape/SVGShape}" source="//@children.6" target="//@children.1" targetEnd="//@children.6/@sourceConnections.1/@children.1" sourceEnd="//@children.6/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="150,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="35,169" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGText" location="390,591" size="126,137" id="{UMLID=_GvMTwNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText}" runTimeClassModel="SVGText(Lorg.w3c.dom.Element;),svgPaint(Lorg.w3c.dom.Element;),textElement,intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="84,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="textElement" id="{UMLID=_HAYKYNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText#textElement}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="105,72">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGText" id="{UMLID=_HAsTcNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText#SVGText(Lorg.w3c.dom.Element;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_HAeRANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_HAamoNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HBOe8dgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText->svgview.shape/Segment}" source="//@children.7" target="//@children.0" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="410,554" size="122,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,145"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HA4gsNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText->svgview.shape/SVGComplexShape}" source="//@children.7" target="//@children.6" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="422,527" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="22,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="142,250"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_HAHrsNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGText}" source="//@children.7" target="//@children.3/@sourceConnections.1" targetEnd="//@children.7/@sourceConnections.2/@children.1" sourceEnd="//@children.7/@sourceConnections.2/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HB2KAdgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGText->svgview.shape/SVGSimpleShape}" source="//@children.7" target="//@children.5" targetEnd="//@children.7/@sourceConnections.3/@children.2" label="//@children.7/@sourceConnections.3/@children.0" sourceEnd="//@children.7/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="516,469" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,145"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGPolygon" location="549,546" size="122,196" id="{UMLID=_GvLFoNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon}" runTimeClassModel="main([Ljava.lang.String;),SVGPolygon(Ljava.awt.geom.Point2D;),SVGPolygon(Ljava.lang.String;),vertices,svgPaint(Lorg.w3c.dom.Element;),SVGPolygon(Ljava.lang.String;Ljava.lang.String;),SVGPolygon(Ljava.awt.geom.Point2D;Ljava.lang.String;),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="vertices" id="{UMLID=_G6Q7UNgwEdy9nKQdMTLpeg,JavaID=java.awt.geom/Point2D@vertices+svgview.shape/SVGPolygon@ownedEnd|java.awt.geom/Point2D#vertices}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="101,126">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGPolygon" id="{UMLID=_G6wqkNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#SVGPolygon(Ljava.lang.String;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGPolygon" id="{UMLID=_G6chgNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#SVGPolygon(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGPolygon" id="{UMLID=_G6ouwNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#SVGPolygon(Ljava.awt.geom.Point2D;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGPolygon" id="{UMLID=_G6tnQNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#SVGPolygon(Ljava.awt.geom.Point2D;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_G6haANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_G6SwgNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#main([Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_G6XB8NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_G-od8dgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon->svgview.shape/Segment}" source="//@children.8" target="//@children.0" targetEnd="//@children.8/@sourceConnections.0/@children.2" label="//@children.8/@sourceConnections.0/@children.0" sourceEnd="//@children.8/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="302,522" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,4" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,150"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_G6EuENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGPolygon}" source="//@children.8" target="//@children.3/@sourceConnections.1" targetEnd="//@children.8/@sourceConnections.1/@children.1" sourceEnd="//@children.8/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_G-AL0tgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGPolygon->svgview.shape/SVGSimpleShape}" source="//@children.8" target="//@children.5" targetEnd="//@children.8/@sourceConnections.2/@children.2" label="//@children.8/@sourceConnections.2/@children.0" sourceEnd="//@children.8/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="660,528" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,155"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="SVGLine" location="848,546" size="117,178" id="{UMLID=_GvOwANgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine}" runTimeClassModel="SVGLine(DDDDLjava.lang.String;),s,SVGLine(Lsvgview.shape.Segment;),SVGLine(Lsvgview.shape.Segment;Ljava.lang.String;),svgPaint(Lorg.w3c.dom.Element;),SVGLine(DDDD),intersection(Lsvgview.shape.Segment;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="41,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="s" id="{UMLID=_HKaQINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/Segment@s+svgview.shape/SVGLine@ownedEnd|svgview.shape/Segment#s}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,108">
+      <children xsi:type="editmodel:MethodEditModel" name="SVGLine" id="{UMLID=_HKcFUNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#SVGLine(DDDD)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGLine" id="{UMLID=_HLAtENgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#SVGLine(Lsvgview.shape.Segment;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGLine" id="{UMLID=_HLLFINgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#SVGLine(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGLine" id="{UMLID=_HKl2UNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#SVGLine(DDDDLjava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="intersection" id="{UMLID=_HLGMoNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#intersection(Lsvgview.shape.Segment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_HK1G4NgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HLt3stgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine->svgview.shape/Segment}" source="//@children.9" target="//@children.0" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="452,522" size="87,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,4" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,150"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_HJ22gNgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGSimpleShape&lt;-svgview.shape/SVGLine}" source="//@children.9" target="//@children.3/@sourceConnections.1" targetEnd="//@children.9/@sourceConnections.1/@children.1" sourceEnd="//@children.9/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_HMq58dgwEdy9nKQdMTLpeg,JavaID=svgview.shape/SVGLine->svgview.shape/SVGSimpleShape}" source="//@children.9" target="//@children.5" targetEnd="//@children.9/@sourceConnections.2/@children.2" label="//@children.9/@sourceConnections.2/@children.0" sourceEnd="//@children.9/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="900,452" size="149,28" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="42,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,155"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=7"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

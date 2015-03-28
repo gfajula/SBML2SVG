@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="reaction-ai" foregroundRGB="255,255,255" id="{UMLID=_UM3I0NjrEdybt_KbWlDTjg,JavaID=model.reaction}" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledY="39" tag="1000" key="3230303730363239204E7565766F4170706C65744B6974616E6F2F6775696C6C65">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.0" name="MModification" location="1494,50" size="129,239" id="{UMLID=_WU0T0NjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification}" runTimeClassModel="getSpecie(),editPoints,getEditPoints(),getType(),line,type,specie,getLine(),MModification(Lmodel.specie.MSpecies;Ljava.lang.String;Lcelldesignerparse_4_0.reaction.EditPoint;Lcelldesignerparse_4_0.commondata.Line;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="50,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="editPoints" id="{UMLID=_W1qXENjrEdybt_KbWlDTjg,JavaID=celldesignerparse_4_0.reaction/EditPoint@editPoints+model.reaction/MModification@ownedEnd|celldesignerparse_4_0.reaction/EditPoint#editPoints}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="line" id="{UMLID=_W1uogNjrEdybt_KbWlDTjg,JavaID=celldesignerparse_4_0.commondata/Line@line+model.reaction/MModification@ownedEnd|celldesignerparse_4_0.commondata/Line#line}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="specie" id="{UMLID=_W1y58NjrEdybt_KbWlDTjg,JavaID=model.specie/MSpecies@specie+model.reaction/MModification@ownedEnd|model.specie/MSpecies#specie}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="type" id="{UMLID=_W1xEwNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#type}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,105">
+      <children xsi:type="editmodel:MethodEditModel" name="MModification" id="{UMLID=_W10IENjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#MModification(Lmodel.specie.MSpecies;Ljava.lang.String;Lcelldesignerparse_4_0.reaction.EditPoint;Lcelldesignerparse_4_0.commondata.Line;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getEditPoints" id="{UMLID=_W2HqENjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#getEditPoints()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLine" id="{UMLID=_W2OXwNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#getLine()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSpecie" id="{UMLID=_W2WTkNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#getSpecie()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="{UMLID=_W2DYoNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification#getType()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MStateTransitionReaction" location="50,375" size="203,65" id="{UMLID=_WSgmsNjrEdybt_KbWlDTjg,JavaID=model.reaction/MStateTransitionReaction}" runTimeClassModel="MStateTransitionReaction(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="162,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MStateTransitionReaction" id="{UMLID=_Wgle8NjrEdybt_KbWlDTjg,JavaID=model.reaction/MStateTransitionReaction#MStateTransitionReaction(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.2/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.6/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.4/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_WgjCsNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MStateTransitionReaction}" source="//@children.1" target="//@children.5" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="103,436" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MDissociation" location="433,375" size="127,65" id="{UMLID=_WSmGQNjrEdybt_KbWlDTjg,JavaID=model.reaction/MDissociation}" runTimeClassModel="MDissociation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MDissociation" id="{UMLID=_WuQukNjrEdybt_KbWlDTjg,JavaID=model.reaction/MDissociation#MDissociation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WuMdINjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MDissociation}" source="//@children.2" target="//@children.1/@sourceConnections.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MTruncation" location="283,375" size="120,65" id="{UMLID=_WSk4INjrEdybt_KbWlDTjg,JavaID=model.reaction/MTruncation}" runTimeClassModel="MTruncation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="99,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MTruncation" id="{UMLID=_WquSYNjrEdybt_KbWlDTjg,JavaID=model.reaction/MTruncation#MTruncation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WqqA8NjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MTruncation}" source="//@children.3" target="//@children.1/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MUnknownTransition" location="1206,375" size="173,65" id="{UMLID=_WSjqANjrEdybt_KbWlDTjg,JavaID=model.reaction/MUnknownTransition}" runTimeClassModel="MUnknownTransition(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="141,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MUnknownTransition" id="{UMLID=_WnIy4NjrEdybt_KbWlDTjg,JavaID=model.reaction/MUnknownTransition#MUnknownTransition(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WnFIgNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MUnknownTransition}" source="//@children.4" target="//@children.1/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="MReaction" location="600,50" size="207,436" id="{UMLID=_WSbuMNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction}" runTimeClassModel="editPoints,reactantLinks,productLinks,getEditPoints(),getProducts(),getReactants(),getProductLinks(),getReactantLinks(),modifications,MReaction(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;),line,reactants,id,getModifications(),getId(),calculateModificationEditPoints(),calculateEditPoints(),products">
+    <children xsi:type="editmodel:CompartmentEditModel" size="37,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="editPoints" id="{UMLID=_WUqi0NjrEdybt_KbWlDTjg,JavaID=@editPoints+model.reaction/MReaction@ownedEnd|#editPoints}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="{UMLID=_WUwpcNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#id}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="line" id="{UMLID=_WU1h8NjrEdybt_KbWlDTjg,JavaID=celldesignerparse_4_0.commondata/SingleLine@line+model.reaction/MReaction@ownedEnd|celldesignerparse_4_0.commondata/SingleLine#line}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modifications" id="{UMLID=_WUyeoNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification@modifications+model.reaction/MReaction@ownedEnd|model.reaction/MModification#modifications}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="productLinks" id="{UMLID=_WUu0QNjrEdybt_KbWlDTjg,JavaID=model.specie/MSpecies@productLinks+model.reaction/MReaction@ownedEnd|model.specie/MSpecies#productLinks}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="products" id="{UMLID=_WU5zYNjrEdybt_KbWlDTjg,JavaID=model.specie/MSpecies@products+model.reaction/MReaction@ownedEnd|model.specie/MSpecies#products}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="reactantLinks" id="{UMLID=_WUs_ENjrEdybt_KbWlDTjg,JavaID=model.specie/MSpecies@reactantLinks+model.reaction/MReaction@ownedEnd|model.specie/MSpecies#reactantLinks}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="reactants" id="{UMLID=_WU3-MNjrEdybt_KbWlDTjg,JavaID=model.specie/MSpecies@reactants+model.reaction/MReaction@ownedEnd|model.specie/MSpecies#reactants}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="186,210">
+      <children xsi:type="editmodel:MethodEditModel" name="MReaction" id="{UMLID=_WVTcANjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#MReaction(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calculateEditPoints" id="{UMLID=_WV1AcNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#calculateEditPoints()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calculateModificationEditPoints" id="{UMLID=_WVGnsNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#calculateModificationEditPoints()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getEditPoints" id="{UMLID=_WU_6ANjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getEditPoints()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="{UMLID=_WVKSENjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getId()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getModifications" id="{UMLID=_WVOjgNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getModifications()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getProductLinks" id="{UMLID=_WV4DwNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getProductLinks()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getProducts" id="{UMLID=_WU7okNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getProducts()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReactantLinks" id="{UMLID=_WVDkYNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getReactantLinks()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReactants" id="{UMLID=_WV8VMNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction#getReactants()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_WauHgNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification@modifications+model.reaction/MReaction@ownedEnd}" source="//@children.5" target="//@children.0" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="1155,155" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="207,119" id="{UMLID=_WauHgdjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification@modifications+model.reaction/MReaction@ownedEnd|model.reaction/MReaction#ownedEnd}" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="modifications" location="0,119" id="{UMLID=_WUyeoNjrEdybt_KbWlDTjg,JavaID=model.reaction/MModification@modifications+model.reaction/MReaction@ownedEnd|model.reaction/MModification#modifications}" multiplicityLabel="//@children.5/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name="- modifications" location="1411,147" size="75,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1480,175" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MTransport" location="822,375" size="116,65" id="{UMLID=_WSoigNjrEdybt_KbWlDTjg,JavaID=model.reaction/MTransport}" runTimeClassModel="MTransport(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MTransport" id="{UMLID=_WxyjsNjrEdybt_KbWlDTjg,JavaID=model.reaction/MTransport#MTransport(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WxvgYNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MTransport}" source="//@children.6" target="//@children.1/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MHeterodimerAssociation" location="590,375" size="202,65" id="{UMLID=_WSfYkNjrEdybt_KbWlDTjg,JavaID=model.reaction/MHeterodimerAssociation}" runTimeClassModel="MHeterodimerAssociation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MHeterodimerAssociation" id="{UMLID=_WdQeINjrEdybt_KbWlDTjg,JavaID=model.reaction/MHeterodimerAssociation#MHeterodimerAssociation(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_WdNa0NjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MHeterodimerAssociation}" source="//@children.7" target="//@children.1/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MKnownTransitionOmitted" location="968,375" size="208,65" id="{UMLID=_WSib4NjrEdybt_KbWlDTjg,JavaID=model.reaction/MKnownTransitionOmitted}" runTimeClassModel="MKnownTransitionOmitted(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="166,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MKnownTransitionOmitted" id="{UMLID=_WkB0gNjrEdybt_KbWlDTjg,JavaID=model.reaction/MKnownTransitionOmitted#MKnownTransitionOmitted(Ljava.lang.String;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lmodel.specie.MSpecies;Lcelldesignerparse_4_0.reaction.EditPoints;Lcelldesignerparse_4_0.commondata.SingleLine;Lmodel.reaction.MModification;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_Wj4qkNjrEdybt_KbWlDTjg,JavaID=model.reaction/MReaction&lt;-model.reaction/MKnownTransitionOmitted}" source="//@children.8" target="//@children.1/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="104,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" properties="wireOptions=3"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

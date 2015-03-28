@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="svgview-i" foregroundRGB="255,255,255" id="{UMLID=_eFjLoNgvEdy9nKQdMTLpeg,JavaID=svgview}" metadata="uml2-1.0" initialized="true" scrolledY="618" tag="1000" key="3230303730363239204E7565766F4170706C65744B6974616E6F2F6775696C6C65">
+  <children xsi:type="editmodel:InterfaceEditModel" name="SVGPaintable" location="238,712" size="129,97" id="{UMLID=_QFq3sNjwEdybt_KbWlDTjg,JavaID=svgview/SVGPaintable}" runTimeClassModel="svgPaint(Lorg.w3c.dom.Element;),svgNS">
+    <children xsi:type="editmodel:CompartmentEditModel" size="61,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="svgNS" id="{UMLID=_Xz680NjwEdybt_KbWlDTjg,JavaID=svgview/SVGPaintable#svgNS}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,18">
+      <children xsi:type="editmodel:MethodEditModel" name="svgPaint" id="{UMLID=_YK3dMNjwEdybt_KbWlDTjg,JavaID=svgview/SVGPaintable#svgPaint(Lorg.w3c.dom.Element;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGView" location="320,600" size="113,196" id="{UMLID=_biFacOIhEdyg5aNK2IoiHA,JavaID=svgview/SVGView}" runTimeClassModel="model,document,cnt,dom,svgCanvas,svgNS,diagramSize,svgSpecies">
+    <children xsi:type="editmodel:CompartmentEditModel" size="92,159">
+      <children xsi:type="editmodel:AttributeEditModel" name="document" id="{UMLID=_Lk2gsOSdEdy04KyIv_nnEw,JavaID=svgview/SVGView#document}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="model" id="{UMLID=_LlbIcOSdEdy04KyIv_nnEw,JavaID=model/Model@model+svgview/SVGView@ownedEnd|model/Model#model}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cnt" id="{UMLID=_LltcUOSdEdy04KyIv_nnEw,JavaID=controller/Controller@cnt+svgview/SVGView@ownedEnd|controller/Controller#cnt}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dom" id="{UMLID=_LluDYOSdEdy04KyIv_nnEw,JavaID=svgview/SVGView#dom}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgNS" id="{UMLID=_Ll8s4OSdEdy04KyIv_nnEw,JavaID=svgview/SVGView#svgNS}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="diagramSize" id="{UMLID=_Ll97AOSdEdy04KyIv_nnEw,JavaID=svgview/SVGView#diagramSize}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgSpecies" id="{UMLID=_Ll-iEOSdEdy04KyIv_nnEw,JavaID=svgview.species/SVGSpecie@svgSpecies+svgview/SVGView@ownedEnd|svgview.species/SVGSpecie#svgSpecies}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgCanvas" id="{UMLID=_NvNfcOSdEdy04KyIv_nnEw,JavaID=svgview/SVGView#svgCanvas}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JStatusBar" location="281,317" size="139,250" id="{UMLID=_J1CZYNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar}" runTimeClassModel="setStatusLabel1(Ljava.lang.String;),progress,stopProcess,stopProgress2(),setStatusLabel2(Ljava.lang.String;),lbl2,stopProgress(),lbl1,dpg,startProgress(),JStatusBar()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,95">
+      <children xsi:type="editmodel:AttributeEditModel" name="dpg" id="{UMLID=_YvOgwNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar@jsb+svgview/DelayedProgress@dpg|svgview/DelayedProgress#dpg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lbl1" id="{UMLID=_YvNSoNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#lbl1}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lbl2" id="{UMLID=_YvKPUNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#lbl2}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="progress" id="{UMLID=_YvHMANjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#progress}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stopProcess" id="{UMLID=_YvFW0NjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#stopProcess}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,108">
+      <children xsi:type="editmodel:MethodEditModel" name="JStatusBar" id="{UMLID=_YvZf4NjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#JStatusBar()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStatusLabel1" id="{UMLID=_YvRkENjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#setStatusLabel1(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStatusLabel2" id="{UMLID=_YvcjMNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#setStatusLabel2(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startProgress" id="{UMLID=_YvauANjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#startProgress()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stopProgress" id="{UMLID=_YvhbsNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#stopProgress()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stopProgress2" id="{UMLID=_YvgNkNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar#stopProgress2()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MemoryWatch" location="100,520" size="147,237" id="{UMLID=_Yv52MNjrEdybt_KbWlDTjg,JavaID=svgview/MemoryWatch}" runTimeClassModel="svgview.MemoryWatch.LabelUpdater,t,lbl,c,run(),MemoryWatch(Ljavax.swing.JLabel;),lupd">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,77">
+      <children xsi:type="editmodel:AttributeEditModel" name="c" id="{UMLID=_LcmT8OF5Edyg5aNK2IoiHA,JavaID=svgview/MemoryWatch#c}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lbl" id="{UMLID=_LcniEOF5Edyg5aNK2IoiHA,JavaID=svgview/MemoryWatch#lbl}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="t" id="{UMLID=_LclF0OF5Edyg5aNK2IoiHA,JavaID=svgview/MemoryWatch#t}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lupd" id="{UMLID=_sxUSMP6fEdyIldVErEtpIA,JavaID=svgview/MemoryWatch$LabelUpdater@lupd+svgview/MemoryWatch@ownedEnd|svgview/MemoryWatch$LabelUpdater#lupd}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,36">
+      <children xsi:type="editmodel:MethodEditModel" name="MemoryWatch" id="{UMLID=_Lcp-UOF5Edyg5aNK2IoiHA,JavaID=svgview/MemoryWatch#MemoryWatch(Ljavax.swing.JLabel;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="{UMLID=_LcrzgOF5Edyg5aNK2IoiHA,JavaID=svgview/MemoryWatch#run()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="126,67">
+      <children xsi:type="editmodel:ClassEditModel" name="LabelUpdater" size="126,65" id="{UMLID=_sxVgUP6fEdyIldVErEtpIA,JavaID=svgview/MemoryWatch$LabelUpdater}" runTimeClassModel="run()">
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="56,18">
+          <children xsi:type="editmodel:MethodEditModel" name="run" id="{UMLID=_28h0IFXiEd2cUoJwGP_HsQ,JavaID=svgview/MemoryWatch$LabelUpdater#run()}"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JScrollableSVGCanvas" location="281,50" size="251,232" id="{UMLID=_J09g4NjrEdybt_KbWlDTjg,JavaID=svgview/JScrollableSVGCanvas}" runTimeClassModel="svgview.JScrollableSVGCanvas.ScrollableCanvasSVGListener,getPreferredScrollableViewportSize(),createListener(),getScrollableBlockIncrement(Ljava.awt.Rectangle;II),getScrollableTracksViewportHeight(),getScrollableTracksViewportWidth(),getScrollableUnitIncrement(Ljava.awt.Rectangle;II)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="214,108">
+      <children xsi:type="editmodel:MethodEditModel" name="createListener" id="{UMLID=_bn5ukOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#createListener()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPreferredScrollableViewportSize" id="{UMLID=_bn4gcOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#getPreferredScrollableViewportSize()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrollableBlockIncrement" id="{UMLID=_bnyZ0eIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#getScrollableBlockIncrement(Ljava.awt.Rectangle;II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrollableTracksViewportHeight" id="{UMLID=_bnwkoOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#getScrollableTracksViewportHeight()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrollableTracksViewportWidth" id="{UMLID=_bnllgOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#getScrollableTracksViewportWidth()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrollableUnitIncrement" id="{UMLID=_bnnaseIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas#getScrollableUnitIncrement(Ljava.awt.Rectangle;II)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="230,67">
+      <children xsi:type="editmodel:ClassEditModel" name="ScrollableCanvasSVGListener" size="230,65" id="{UMLID=_bom5MOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas$ScrollableCanvasSVGListener}" runTimeClassModel="setMySize(Ljava.awt.Dimension;)">
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="90,18">
+          <children xsi:type="editmodel:MethodEditModel" name="setMySize" id="{UMLID=_bptscOIhEdyg5aNK2IoiHA,JavaID=svgview/JScrollableSVGCanvas$ScrollableCanvasSVGListener#setMySize(Ljava.awt.Dimension;)}"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DelayedProgress" location="531,353" size="166,314" id="{UMLID=_YvQV8NjrEdybt_KbWlDTjg,JavaID=svgview/DelayedProgress}" runTimeClassModel="setStop(Z),stop,DelayedProgress(Lsvgview.JStatusBar;),t,pupd,count,run(),waiting,jsb,svgview.DelayedProgress.ProgressUpdater,jpb">
+    <children xsi:type="editmodel:CompartmentEditModel" size="64,136">
+      <children xsi:type="editmodel:AttributeEditModel" name="count" id="{UMLID=_LaLSEOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#count}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jpb" id="{UMLID=_LaOVYOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#jpb}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jsb" id="{UMLID=_LaNuUOF5Edyg5aNK2IoiHA,JavaID=svgview/JStatusBar@jsb+svgview/DelayedProgress@dpg|svgview/JStatusBar#jsb}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stop" id="{UMLID=_LaIOwOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#stop}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="t" id="{UMLID=_LaKD8OF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#t}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="waiting" id="{UMLID=_LaMgMOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#waiting}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pupd" id="{UMLID=_svz2UP6fEdyIldVErEtpIA,JavaID=svgview/DelayedProgress$ProgressUpdater@pupd+svgview/DelayedProgress@ownedEnd|svgview/DelayedProgress$ProgressUpdater#pupd}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="123,54">
+      <children xsi:type="editmodel:MethodEditModel" name="DelayedProgress" id="{UMLID=_LaVDEOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#DelayedProgress(Lsvgview.JStatusBar;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="{UMLID=_LaTN4OF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#run()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStop" id="{UMLID=_LaXfUOF5Edyg5aNK2IoiHA,JavaID=svgview/DelayedProgress#setStop(Z)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="145,67">
+      <children xsi:type="editmodel:ClassEditModel" name="ProgressUpdater" size="145,65" id="{UMLID=_sv1EcP6fEdyIldVErEtpIA,JavaID=svgview/DelayedProgress$ProgressUpdater}" runTimeClassModel="run()">
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="56,18">
+          <children xsi:type="editmodel:MethodEditModel" name="run" id="{UMLID=_29tf4FXiEd2cUoJwGP_HsQ,JavaID=svgview/DelayedProgress$ProgressUpdater#run()}"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SeparatePanel" location="569,50" size="138,119" id="{UMLID=_Yv7rYNjrEdybt_KbWlDTjg,JavaID=svgview/SeparatePanel}" runTimeClassModel="paintComponent(Ljava.awt.Graphics;),rightColor,SeparatePanel(Ljava.awt.Color;Ljava.awt.Color;),leftColor">
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="leftColor" id="{UMLID=_LeM2cOF5Edyg5aNK2IoiHA,JavaID=svgview/SeparatePanel#leftColor}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rightColor" id="{UMLID=_LeLoUOF5Edyg5aNK2IoiHA,JavaID=svgview/SeparatePanel#rightColor}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,36">
+      <children xsi:type="editmodel:MethodEditModel" name="SeparatePanel" id="{UMLID=_LeS9EOF5Edyg5aNK2IoiHA,JavaID=svgview/SeparatePanel#SeparatePanel(Ljava.awt.Color;Ljava.awt.Color;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="paintComponent" id="{UMLID=_LeOEkOF5Edyg5aNK2IoiHA,JavaID=svgview/SeparatePanel#paintComponent(Ljava.awt.Graphics;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SVGViewFrame" location="50,50" size="181,450" id="{UMLID=_JMPUANjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame}" runTimeClassModel="main([Ljava.lang.String;),setNewController(Lsvgcontroller.SVGController;),jsp,dom,svgCanvas,svgNS,saveToSVGZFile(Ljava.lang.String;),document,setSVGCanvasListeners(),mb,saveToSVGFile(Ljava.lang.String;),jsb,SVGViewFrame(Lmodel.Model;Lsvgcontroller.SVGController;),diagramSize,initMenuBar(),svgSpecies,SVGViewFrame(Lsvgcontroller.SVGController;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="92,177">
+      <children xsi:type="editmodel:AttributeEditModel" name="diagramSize" id="{UMLID=_LsB3EOF5Edyg5aNK2IoiHA,JavaID=svgview/SVGViewFrame#diagramSize}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="document" id="{UMLID=_J0oJsNjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#document}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dom" id="{UMLID=_J05PcNjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#dom}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jsb" id="{UMLID=_J1BLQNjrEdybt_KbWlDTjg,JavaID=svgview/JStatusBar@jsb+svgview/SVGViewFrame@ownedEnd|svgview/JStatusBar#jsb}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jsp" id="{UMLID=_J0sbINjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#jsp}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mb" id="{UMLID=_J0-vANjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#mb}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgCanvas" id="{UMLID=_J08SwNjrEdybt_KbWlDTjg,JavaID=org.apache.batik.swing/JSVGCanvas@svgCanvas+svgview/SVGViewFrame@ownedEnd|org.apache.batik.swing/JSVGCanvas#svgCanvas}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgNS" id="{UMLID=_J1DAcNjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#svgNS}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="svgSpecies" id="{UMLID=_J1E1oNjrEdybt_KbWlDTjg,JavaID=svgview.species/SVGSpecie@svgSpecies+svgview/SVGViewFrame@ownedEnd|svgview.species/SVGSpecie#svgSpecies}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="160,162">
+      <children xsi:type="editmodel:MethodEditModel" name="setNewController" id="{UMLID=_J1hhkNjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#setNewController(Lsvgcontroller.SVGController;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="saveToSVGFile" id="{UMLID=_J1d3MNjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#saveToSVGFile(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGViewFrame" id="{UMLID=_J1Rp8NjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#SVGViewFrame(Lsvgcontroller.SVGController;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initMenuBar" id="{UMLID=_J1lL8NjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#initMenuBar()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SVGViewFrame" id="{UMLID=_J1Gq0NjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#SVGViewFrame(Lmodel.Model;Lsvgcontroller.SVGController;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="{UMLID=_LsWnMOF5Edyg5aNK2IoiHA,JavaID=svgview/SVGViewFrame#main([Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="saveToSVGZFile" id="{UMLID=_J1JHENjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#saveToSVGZFile(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSVGCanvasListeners" id="{UMLID=_J1nBINjrEdybt_KbWlDTjg,JavaID=svgview/SVGViewFrame#setSVGCanvasListeners()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="All" properties="wireOptions=1"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

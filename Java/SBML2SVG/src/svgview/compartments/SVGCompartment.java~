@@ -1,0 +1,474 @@
+package svgview.compartments;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import model.MCompartment;
+
+import org.apache.batik.dom.svg.SVGDOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import svgview.util.SVGTextRenderer;
+import svgview.util.SVGUtil;
+import celldesignerparse_4_0.commondata.DoubleLine;
+
+public class SVGCompartment {
+	public static final String svgNS = SVGDOMImplementation.SVG_NAMESPACE_URI;
+	public static final int CORNER_RADIUS = 20;
+	public static final double BEZIER_FACTOR = 0.55228474983; 	// Para aproximar esquinas redondeadas con curvas de Bezier
+																// equivale a 4*(sqrt(2)-1)/3
+	private Dimension size;
+	
+	private MCompartment mc;
+	private Document svgDoc;
+	
+	public SVGCompartment(Document svgDoc , MCompartment mc, Dimension size) {
+		this.svgDoc = svgDoc;
+		this.mc = mc;		
+		this.size = size;
+	}
+	
+	private Element getOuterRect(double x, double y, double width, double height, double thickness ) {
+		return getRect(x, y, width, height, thickness, false);		
+	}
+	
+	private Element getInnerRect(double x, double y, double width, double height, double thickness ) {
+		return getRect(x, y, width, height, thickness, true);		
+	}
+
+	private Element getOuterOval(double x, double y, double width, double height, double thickness ) {
+		Element oval = this.svgDoc.createElementNS (svgNS, "ellipse");
+		double stroke = ((DoubleLine)mc.getLine()).getOuterWidth();;
+		Color c = mc.getPaint().getColor();
+		oval.setAttribute("cx", ""+ (x + width/2) );
+		oval.setAttribute("cy", ""+ (y + height/2 ) );
+		oval.setAttribute("rx", "" + (width/2 ) );
+		oval.setAttribute("ry", "" + (height/2 ) );
+//		oval.setAttribute("stroke", SVGUtil.getHexColor(c));
+		oval.setAttribute("style", "fill: none;stroke:" + SVGUtil.getHexColor(c) + ";" +
+				                   "stroke-width:"+stroke+ ";" );
+		return oval;
+	}	
+	
+	private Element getInnerOval(double x, double y, double width, double height, double thickness ) {
+		Element oval = this.svgDoc.createElementNS (svgNS, "ellipse");
+		Color c = mc.getPaint().getColor();
+		oval.setAttribute("cx", ""+ (x + width/2) );
+		oval.setAttribute("cy", ""+ (y + height/2 ) );
+		oval.setAttribute("rx", "" + (width/2 - thickness) );
+		oval.setAttribute("ry", "" + (height/2 - thickness) );
+//		oval.setAttribute("stroke", SVGUtil.getHexColor(c));
+		oval.setAttribute("style", "fill: none;stroke:" + SVGUtil.getHexColor(c) + ";" +
+				                   "stroke-width:1;" );
+		return oval;
+	}
+	
+	private Element getFillOval(double x, double y, double width, double height, double thickness ) {
+		Element oval = this.svgDoc.createElementNS (svgNS, "ellipse");
+		Color c = mc.getPaint().getColor();
+		oval.setAttribute("cx", ""+ (x + width/2) );
+		oval.setAttribute("cy", ""+ (y + height/2 ) );
+		oval.setAttribute("rx", "" + (width - thickness)/2 );
+		oval.setAttribute("ry", "" + (height - thickness)/2 );
+//		oval.setAttribute("stroke", SVGUtil.getHexColor(c));
+		oval.setAttribute("style", "fill: none; stroke-opacity:0.249;stroke:" + SVGUtil.getHexColor(c) + ";" +
+				                   "stroke-width:" + thickness + ";");
+		return oval;
+	}
+	
+	
+	private Element getFill(double x, double y, double width, double height) {		
+		Element fill = this.svgDoc.createElementNS (svgNS, "rect");
+		Color c = mc.getPaint().getColor();
+		fill.setAttributeNS (null, "fill", SVGUtil.getHexColor(c));
+		fill.setAttributeNS (null, "style", "fill-opacity: 0.498; opacity:0.498; stroke:none;");
+		fill.setAttributeNS (null, "width", Double.toString(width));
+		fill.setAttributeNS (null, "height", Double.toString(height));
+		fill.setAttributeNS (null, "x", Double.toString(x));
+		fill.setAttributeNS (null, "y", Double.toString(y));
+		return fill;
+	}
+	
+	private Element getFillRect(double x, double y, double width, double height, double thickness ) {
+		double ix, iy, iwidth, iheight, iCORNER_RADIUS;
+		iCORNER_RADIUS = CORNER_RADIUS - thickness/2;		
+		ix = x + thickness;
+		iy = y + thickness;
+		iwidth = width - thickness*2;
+		iheight = height - thickness*2;
+		
+		Element rect = this.svgDoc.createElementNS (svgNS, "path");
+		Color c = mc.getPaint().getColor();
+		rect.setAttributeNS (null, "fill", SVGUtil.getHexColor(c));
+		rect.setAttributeNS (null, "style", "fill-opacity: 0.498; opacity:0.498; stroke:none;");
+		rect.setAttributeNS (null, "d", 
+				"M" + Double.toString(x+CORNER_RADIUS) + " " + Double.toString(y) + " " +    
+				"L" + Double.toString(x+width-CORNER_RADIUS) + " " + Double.toString(y) + " " +
+				
+				"C" + Double.toString(x+width-CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(y) + " " +
+				      Double.toString(x+width) + " " + Double.toString(y+CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+				      Double.toString(x+width) + " " + Double.toString(y+CORNER_RADIUS) + " " +
+			    "L" + Double.toString(x+width) + " " + Double.toString(y+height-CORNER_RADIUS) + " " +
+				
+			    "C" + Double.toString(x+width) + " " + Double.toString(y+height-CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+			      	  Double.toString(x+width-CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(y+height) + " " +
+			      	  Double.toString(x+width-CORNER_RADIUS) + " " + Double.toString(y+height) + " " +
+			    
+			    "L" + Double.toString(x+CORNER_RADIUS) + " " + Double.toString(y+height) + " " +  
+			    
+			    "C" + Double.toString(x+CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(y+height) + " " +
+		      	  	  Double.toString(x) + " " + Double.toString(y+height-CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+		      	  	  Double.toString(x) + " " + Double.toString(y+height-CORNER_RADIUS) + " " +			    
+			      
+		      	"L" + Double.toString(x) + " " + Double.toString(y+CORNER_RADIUS) + " " +
+
+			    "C" + Double.toString(x) + " " + Double.toString(y+CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+	      	  	      Double.toString(x+CORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(y) + " " +
+	      	  	      Double.toString(x+CORNER_RADIUS) + " " + Double.toString(y) + " " +
+	      	  	      
+  				"M" + Double.toString(ix+iCORNER_RADIUS) + " " + Double.toString(iy) + " " +   
+  				
+  				"C" + Double.toString(ix+iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(iy) + " " +
+  					  Double.toString(ix) + " " + Double.toString(iy+iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+    	  	          Double.toString(ix) + " " + Double.toString(iy+iCORNER_RADIUS) + " " +    	  	          
+    	  	          
+  				
+				"L" + Double.toString(ix) + " " + Double.toString(iy+iheight-iCORNER_RADIUS) + " " +
+				
+				"C" + Double.toString(ix) + " " + Double.toString(iy+iheight-iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+					  Double.toString(ix+iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(iy+iheight) + " " +
+					  Double.toString(ix+iCORNER_RADIUS) + " " + Double.toString(iy+iheight) + " " +
+					  
+				"L" + Double.toString(ix+iwidth-iCORNER_RADIUS) + " " + Double.toString(iy+iheight) + " " +
+
+				"C" + Double.toString(ix+iwidth-iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(iy+iheight) + " " +
+				      Double.toString(ix+iwidth) + " " + Double.toString(iy+iheight-iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+				      Double.toString(ix+iwidth) + " " + Double.toString(iy+iheight-iCORNER_RADIUS) + " " +
+				   
+				"L" + Double.toString(ix+iwidth) + " " + Double.toString(iy+iCORNER_RADIUS) + " " +
+				
+				"C" + Double.toString(ix+iwidth) + " " + Double.toString(iy+iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " +
+					  Double.toString(ix+iwidth-iCORNER_RADIUS*(1-BEZIER_FACTOR)) + " " + Double.toString(iy) + " " +
+					  Double.toString(ix+iwidth-iCORNER_RADIUS) + " " + Double.toString(iy) + " " +
+				
+				"Z"
+		);
+		
+		return rect;
+	}
+	
+	private Element getLine(double x1, double y1, double x2, double y2, double stroke) {
+	    Element line = this.svgDoc.createElementNS (svgNS, "line");
+	    Color c = mc.getPaint().getColor();
+	    line.setAttributeNS (null, "stroke", SVGUtil.getHexColor(c));
+	    line.setAttributeNS (null, "stroke-width", Double.toString(stroke));
+	    line.setAttributeNS (null, "x1", "" + x1 );
+	    line.setAttributeNS (null, "y1", "" + y1 );
+	    line.setAttributeNS (null, "x2", "" + x2 );
+	    line.setAttributeNS (null, "y2", "" + y2 );
+	    
+	    
+	    return line;
+	}
+	
+	
+	private Element getRect(double x, double y, double width, double height, double thickness, boolean inner) {		
+	    Element rect = this.svgDoc.createElementNS (svgNS, "rect");
+	    Color c = mc.getPaint().getColor();
+	    double stroke = 0;
+	    if (!inner) {
+		    if (mc.getLine() instanceof DoubleLine) {
+		    	stroke = ((DoubleLine)mc.getLine()).getOuterWidth();
+		    } else {
+		    	stroke = 1;
+		    }		    
+		    
+	    } else {	    
+		    if (mc.getLine() instanceof DoubleLine) {
+		    	stroke = ((DoubleLine)mc.getLine()).getInnerWidth();
+		    } else {
+		    	stroke = 1;
+		    }
+		    
+	    }	    
+
+	    try {
+		    if ( width  < 0 || height < 0) {
+		    	throw new Exception("rect con width negativo!!!!");
+		    }
+	    }
+	    catch (Exception e) {
+	    	e.printStackTrace();
+	    }
+	    
+	    rect.setAttributeNS (null, "fill", "none");
+	    rect.setAttributeNS (null, "stroke", SVGUtil.getHexColor(c));
+	    
+	    rect.setAttributeNS (null, "stroke-width", Double.toString(stroke)); 
+	    rect.setAttributeNS (null, "width", Double.toString(width));
+	    rect.setAttributeNS (null, "height", Double.toString(height));
+	    rect.setAttributeNS (null, "x", Double.toString(x));
+	    rect.setAttributeNS (null, "y", Double.toString(y));
+	    if (!inner) {
+	    	rect.setAttributeNS (null, "rx", Double.toString(CORNER_RADIUS));
+		    rect.setAttributeNS (null, "ry", Double.toString(CORNER_RADIUS));	
+	    } else {
+	    	rect.setAttributeNS (null, "rx", Double.toString(CORNER_RADIUS-thickness/2));
+		    rect.setAttributeNS (null, "ry", Double.toString(CORNER_RADIUS-thickness/2));
+	    }
+	    		
+		return rect;
+	}	
+
+	public Element getSVGShape() {
+		Element svgShape;
+    	
+    	double thickness;
+    	if (mc.getLine() instanceof DoubleLine) {
+    		thickness = ((DoubleLine)mc.getLine()).getThickness();
+	    } else {
+	    	thickness = 1;
+	    };
+	    
+		switch (mc.getClassOf()) {
+		case OVAL:
+			svgShape = getSVGShapeOval( thickness );
+			break;
+		case SQUARE_CLOSEUP_WEST:
+			svgShape = getSVGShapeCloseUpWest( thickness );
+			break;
+		case SQUARE_CLOSEUP_SOUTH:
+			svgShape = getSVGShapeCloseUpSouth( thickness );
+			break;
+		case SQUARE_CLOSEUP_NORTH:
+			svgShape = getSVGShapeCloseUpNorth( thickness );
+			break;
+		default:
+			svgShape = getSVGShapeRect( thickness );
+		}
+		
+	    Element text = SVGTextRenderer.getInstance().drawTextCentered(svgDoc, 
+	    		mc.getBounds().getX() + 
+	    		mc.getBounds().getWidth() / 2 , 
+	    		mc.getBounds().getY() +
+	    		mc.getBounds().getHeight() - thickness - 15, 
+	    		mc.getName(),
+	    		12);    
+	    
+	    svgShape.appendChild (text);
+	    
+		return svgShape;
+	}
+	
+	private Element getSVGShapeCloseUpNorth(double thickness) {
+    	Element svgSpecie = svgDoc.createElementNS(svgNS, "g");
+    	svgSpecie.setAttribute("id", mc.getIDAlias());
+    	svgSpecie.setAttribute("style", "text-rendering: auto;");
+    	
+    	Element fill = getFill(0, mc.getBounds().getY(), 
+    						   this.size.getWidth(), thickness );
+    	
+    	svgSpecie.appendChild( fill );
+    	
+    	double stroke;
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getOuterWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineUp = getLine(0, mc.getBounds().getY(),
+    			            	this.size.getWidth(), mc.getBounds().getY(),
+    			                stroke);
+    	svgSpecie.appendChild( lineUp );
+
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getInnerWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineDown = getLine(0, mc.getBounds().getY() + thickness,
+    			            	this.size.getWidth(), mc.getBounds().getY() + thickness,
+    			                stroke);
+    	svgSpecie.appendChild( lineDown );    	
+    	
+    	
+		return svgSpecie;
+	}
+	
+	private Element getSVGShapeCloseUpSouth(double thickness) {
+    	Element svgSpecie = svgDoc.createElementNS(svgNS, "g");
+    	svgSpecie.setAttribute("id", mc.getIDAlias());
+    	svgSpecie.setAttribute("style", "text-rendering: auto;");
+    	
+    	Element fill = getFill(0, mc.getBounds().getY() - thickness, 
+    						   this.size.getWidth(), thickness );
+    	
+    	svgSpecie.appendChild( fill );
+    	
+    	double stroke;
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getOuterWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineUp = getLine(0, mc.getBounds().getY(),
+    			            	this.size.getWidth(), mc.getBounds().getY(),
+    			                stroke);
+    	svgSpecie.appendChild( lineUp );
+
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getInnerWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineDown = getLine(0, mc.getBounds().getY() - thickness,
+    			            	this.size.getWidth(), mc.getBounds().getY() - thickness,
+    			                stroke);
+    	svgSpecie.appendChild( lineDown );    	
+    	
+    	
+		return svgSpecie;
+	}
+	
+	private Element getSVGShapeCloseUpWest(double thickness) {
+    	Element svgSpecie = svgDoc.createElementNS(svgNS, "g");
+    	svgSpecie.setAttribute("id", mc.getIDAlias());
+    	svgSpecie.setAttribute("style", "text-rendering: auto;");
+    	
+    	Element fill = getFill(mc.getBounds().getX(), 0 , 
+    						   thickness , this.size.getHeight() );
+    	
+    	svgSpecie.appendChild( fill );
+    	
+    	double stroke;
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getOuterWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineUp = getLine(mc.getBounds().getX(), 0 ,
+    			            	 mc.getBounds().getX(), this.size.getHeight(),
+    			                stroke);
+    	svgSpecie.appendChild( lineUp );
+
+	    if (mc.getLine() instanceof DoubleLine) {
+	    	stroke = ((DoubleLine)mc.getLine()).getInnerWidth();
+	    } else {
+	    	stroke = 1;
+	    }	    	
+    	Element lineDown = getLine(mc.getBounds().getX() + thickness, 0 ,
+           	 					   mc.getBounds().getX() + thickness, this.size.getHeight(),
+    			                stroke);
+    	svgSpecie.appendChild( lineDown );    	
+    	
+    	
+		return svgSpecie;
+	}	
+
+	private Element getSVGShapeOval(double thickness) {		
+    	Element svgSpecie = svgDoc.createElementNS(svgNS, "g");
+    	svgSpecie.setAttribute("id", mc.getIDAlias());
+    	svgSpecie.setAttribute("style", "text-rendering: auto;");
+
+	    Element ovf = getFillOval(
+	    		 mc.getBounds().getX(), 
+				 mc.getBounds().getY(), 
+				 mc.getBounds().getWidth(), 
+				 mc.getBounds().getHeight(),
+				 thickness);
+	    svgSpecie.appendChild(ovf);
+
+    	Element ov = getOuterOval(
+				 mc.getBounds().getX(), 
+				 mc.getBounds().getY(), 
+				 mc.getBounds().getWidth(), 
+				 mc.getBounds().getHeight(),
+				 thickness    				 
+		);      	
+		svgSpecie.appendChild(ov);
+		
+		ov =  getInnerOval(
+				 mc.getBounds().getX() , 
+				 mc.getBounds().getY() , 
+				 mc.getBounds().getWidth() , 
+				 mc.getBounds().getHeight()  , 
+				 thickness
+				 );		
+		svgSpecie.appendChild(ov);
+//	    
+	    
+
+
+	    
+	    return svgSpecie;
+	}
+	
+	
+	private Element getSVGShapeRect(double thickness) {		
+    	Element svgSpecie = svgDoc.createElementNS(svgNS, "g");
+    	svgSpecie.setAttribute("id", mc.getIDAlias());
+    	svgSpecie.setAttribute("style", "text-rendering: auto;");
+    	
+	    Element sqf = getFillRect(
+	    		 mc.getBounds().getX(), 
+				 mc.getBounds().getY(), 
+				 mc.getBounds().getWidth(), 
+				 mc.getBounds().getHeight(),
+				 thickness);
+	    svgSpecie.appendChild(sqf);
+
+    	Element sq = getOuterRect(
+				 mc.getBounds().getX(), 
+				 mc.getBounds().getY(), 
+				 mc.getBounds().getWidth(), 
+				 mc.getBounds().getHeight(),
+				 thickness    				 
+		);      	
+		svgSpecie.appendChild(sq);
+		
+		sq =  getInnerRect(mc.getBounds().getX() + thickness , 
+				 mc.getBounds().getY() + thickness , 
+				 mc.getBounds().getWidth() - thickness*2, 
+				 mc.getBounds().getHeight() - thickness*2 , 
+				 thickness
+				 );		
+		svgSpecie.appendChild(sq);
+	    
+	    
+
+	    Element text = SVGTextRenderer.getInstance().drawTextCentered(svgDoc, 
+	    		mc.getBounds().getX() + 
+	    		mc.getBounds().getWidth() / 2 , 
+	    		mc.getBounds().getY() +
+	    		mc.getBounds().getHeight() - thickness - 15, 
+	    		mc.getName(),
+	    		12);    
+	    
+	    svgSpecie.appendChild (text);
+	    
+//	    Element textBound = this.svgDoc.createElementNS (svgNS, "rect");
+//        
+//	    textBound.setAttributeNS (null, "fill", "blue");
+//	    textBound.setAttributeNS (null, "fill-opacity", "0.25");
+//	    textBound.setAttributeNS (null, "stroke", "none");
+//	    
+//	    textBound.setAttributeNS (null, "width", Double.toString(mc.getBounds().getWidth()));
+//	    textBound.setAttributeNS (null, "height", Double.toString(20));
+//	    textBound.setAttributeNS (null, "x", Double.toString(mc.getBounds().getX()));
+//	    textBound.setAttributeNS (null, "y", Double.toString(mc.getBounds().getY() +
+//	    		mc.getBounds().getHeight() - thickness - 15));
+//	    
+//	    svgSpecie.appendChild (textBound);
+	    
+	    return svgSpecie;
+	}
+	
+	public void svgPaint(Element docParent) {
+	    docParent.appendChild( getSVGShape() );	    
+	}
+	
+	public Document getDocument() {
+		return this.svgDoc;
+	}
+}

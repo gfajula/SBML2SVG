@@ -1,0 +1,87 @@
+package celldesignerparse_4_0.annotation.listOfCompartmentAliases;
+
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+
+import org.sbml.libsbml.XMLNode;
+
+import celldesignerparse_4_0.commondata.DoubleLine;
+import celldesignerparse_4_0.commondata.Line;
+import celldesignerparse_4_0.commondata.Paint;
+
+public class CompartmentAlias {
+	private String id;
+	private String compartment;
+	private String classOf;
+	private Rectangle2D bounds;
+	private Point2D namePoint;
+	private Line line;
+	private Paint paint;
+	
+	public CompartmentAlias(XMLNode node) {
+		id = node.getAttributes().getValue("id");
+		compartment = node.getAttributes().getValue("compartment");
+		for (int i=0;i<node.getNumChildren();i++){
+			if (node.getChild(i).getName().compareToIgnoreCase("class")==0){
+				classOf = node.getChild(i).getChild(0).getCharacters();
+			} else if (node.getChild(i).getName().compareToIgnoreCase("bounds")==0){
+				bounds = new Rectangle2D.Double(
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("x")),
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("y")),
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("w")),
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("h")));
+			} else if (node.getChild(i).getName().compareToIgnoreCase("point")==0){
+				bounds = new Rectangle2D.Double(
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("x")),
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("y")),
+						100,100);
+			} else if (node.getChild(i).getName().compareToIgnoreCase("namePoint")==0){
+				namePoint = new Point2D.Double(
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("x")),
+						Double.parseDouble(node.getChild(i).getAttributes().getValue("y")));
+			} else if (node.getChild(i).getName().compareToIgnoreCase("doubleLine")==0){
+				line = new DoubleLine(node.getChild(i));
+			} else if (node.getChild(i).getName().compareToIgnoreCase("paint")==0){
+				paint = new Paint(node.getChild(i));
+			}
+		}
+	}
+	
+	public String toString(){
+		return "id: "+id+"\n"+
+		"compartment: "+compartment+"\n"+
+		"class: "+classOf+"\n"+
+		"bounds: "+bounds+"\n"+
+		"namePoint: "+namePoint+"\n"+
+		"line: "+line+"\n"+
+		"paint: "+paint+"\n";
+	}
+
+	public String getIdAlias() {
+		return id;
+	}
+
+	public String getCompartment() {
+		return compartment;
+	}
+
+	public String getClassOf() {
+		return classOf;
+	}
+
+	public Rectangle2D getBounds() {
+		return bounds;
+	}
+
+	public Point2D getNamePoint() {
+		return namePoint;
+	}
+
+	public Line getLine() {
+		return line;
+	}
+
+	public Paint getPaint() {
+		return paint;
+	}
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="model-i" foregroundRGB="255,255,255" id="{UMLID=_eIhAENgvEdy9nKQdMTLpeg,JavaID=model}" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303730363239204E7565766F4170706C65744B6974616E6F2F6775696C6C65">
+  <children xsi:type="editmodel:ClassEditModel" name="Model" location="237,50" size="156,334" id="{UMLID=_J0rNANjrEdybt_KbWlDTjg,JavaID=model/Model}" runTimeClassModel="getSpecieByAlias(Ljava.lang.String;),reactions,addSimpleAlias(Lmodel.specie.MSpeciesSimple;Ljava.lang.String;),addCompartment(Lmodel.MCompartment;),simpleAliases,addComplexAlias(Lmodel.specie.MSpeciesComplex;),addAliasToComplex(Lmodel.specie.MSpeciesSimple;Ljava.lang.String;),getSimpleAliases(),getCompartments(),complexeAliases,addReaction(Lmodel.reaction.MReaction;),getReactions(),getComplexAliases(),compartments">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:AttributeEditModel" name="compartments" id="{UMLID=_er-i0OP-EdypnKf47GDmCA,JavaID=model/MCompartment@compartments+model/Model@ownedEnd|model/MCompartment#compartments}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="complexeAliases" id="{UMLID=_er5DQOP-EdypnKf47GDmCA,JavaID=model.specie/MSpeciesComplex@complexeAliases+model/Model@ownedEnd|model.specie/MSpeciesComplex#complexeAliases}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="reactions" id="{UMLID=_er3OEOP-EdypnKf47GDmCA,JavaID=model.reaction/MReaction@reactions+model/Model@ownedEnd|model.reaction/MReaction#reactions}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="simpleAliases" id="{UMLID=_er64cOP-EdypnKf47GDmCA,JavaID=model.specie/MSpeciesSimple@simpleAliases+model/Model@ownedEnd|model.specie/MSpeciesSimple#simpleAliases}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,195">
+      <children xsi:type="editmodel:MethodEditModel" name="addAliasToComplex" id="{UMLID=_esNzYOP-EdypnKf47GDmCA,JavaID=model/Model#addAliasToComplex(Lmodel.specie.MSpeciesSimple;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCompartment" id="{UMLID=_esAYAOP-EdypnKf47GDmCA,JavaID=model/Model#addCompartment(Lmodel.MCompartment;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addComplexAlias" id="{UMLID=_esZZkOP-EdypnKf47GDmCA,JavaID=model/Model#addComplexAlias(Lmodel.specie.MSpeciesComplex;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addReaction" id="{UMLID=_esdrAOP-EdypnKf47GDmCA,JavaID=model/Model#addReaction(Lmodel.reaction.MReaction;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addSimpleAlias" id="{UMLID=_esh8cOP-EdypnKf47GDmCA,JavaID=model/Model#addSimpleAlias(Lmodel.specie.MSpeciesSimple;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCompartments" id="{UMLID=_esGeoOP-EdypnKf47GDmCA,JavaID=model/Model#getCompartments()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getComplexAliases" id="{UMLID=_esDbUOP-EdypnKf47GDmCA,JavaID=model/Model#getComplexAliases()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReactions" id="{UMLID=_eszpQOP-EdypnKf47GDmCA,JavaID=model/Model#getReactions()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSimpleAliases" id="{UMLID=_esv-4OP-EdypnKf47GDmCA,JavaID=model/Model#getSimpleAliases()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSpecieByAlias" id="{UMLID=_espRMOP-EdypnKf47GDmCA,JavaID=model/Model#getSpecieByAlias(Ljava.lang.String;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="ECompartment" location="443,50" size="216,123" id="{UMLID=_zwNa0NjrEdybt_KbWlDTjg,JavaID=model/ECompartment}" runTimeClassModel="SQUARE_CLOSEUP_NORTH%,OVAL%,SQUARE%,SQUARE_CLOSEUP_NORTHWEST%">
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,72">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="OVAL" id="{UMLID=_e1iHcOP-EdypnKf47GDmCA,JavaID=model/ECompartment#OVAL%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SQUARE" id="{UMLID=_e1hgYOP-EdypnKf47GDmCA,JavaID=model/ECompartment#SQUARE%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SQUARE_CLOSEUP_NORTH" id="{UMLID=_e1d2AOP-EdypnKf47GDmCA,JavaID=model/ECompartment#SQUARE_CLOSEUP_NORTH%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SQUARE_CLOSEUP_NORTHWEST" id="{UMLID=_e1gSQOP-EdypnKf47GDmCA,JavaID=model/ECompartment#SQUARE_CLOSEUP_NORTHWEST%}"/>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" enumerationClassMode="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MCompartment" location="50,50" size="137,314" id="{UMLID=_zu3-ENjrEdybt_KbWlDTjg,JavaID=model/MCompartment}" runTimeClassModel="position,getClassOf(),classOf,line,paint,MCompartment(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.awt.geom.Rectangle2D;Ljava.awt.geom.Point2D;Lcelldesignerparse_4_0.commondata.Line;Lcelldesignerparse_4_0.commondata.Paint;),getLine(),getPaint(),getName(),bounds,id,idAlias,getId(),getNamePoint(),name,getIDAlias(),getBounds(),namePoint">
+    <children xsi:type="editmodel:CompartmentEditModel" size="78,90"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="111,177"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="EPosition" location="50,414" size="114,195" id="{UMLID=_e45kgOP-EdypnKf47GDmCA,JavaID=model/EPosition}" runTimeClassModel="SOUTHEAST%,SOUTH%,NORTHWEST%,SOUTHWEST%,EAST%,NORTHEAST%,NORTH%,WEST%">
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,144">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="EAST" id="{UMLID=_e-aWoOP-EdypnKf47GDmCA,JavaID=model/EPosition#EAST%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SOUTH" id="{UMLID=_e-ZvkOP-EdypnKf47GDmCA,JavaID=model/EPosition#SOUTH%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="NORTHEAST" id="{UMLID=_e-f2MOP-EdypnKf47GDmCA,JavaID=model/EPosition#NORTHEAST%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="WEST" id="{UMLID=_e-X6YOP-EdypnKf47GDmCA,JavaID=model/EPosition#WEST%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="NORTHWEST" id="{UMLID=_e-VeIOP-EdypnKf47GDmCA,JavaID=model/EPosition#NORTHWEST%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="NORTH" id="{UMLID=_e-YhcOP-EdypnKf47GDmCA,JavaID=model/EPosition#NORTH%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SOUTHWEST" id="{UMLID=_e-fPIOP-EdypnKf47GDmCA,JavaID=model/EPosition#SOUTHWEST%}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SOUTHEAST" id="{UMLID=_e-eoEOP-EdypnKf47GDmCA,JavaID=model/EPosition#SOUTHEAST%}"/>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" enumerationClassMode="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="All" properties="wireOptions=1"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

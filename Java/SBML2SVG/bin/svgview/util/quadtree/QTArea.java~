@@ -1,0 +1,183 @@
+package svgview.util.quadtree;
+
+import java.util.Vector;
+
+public class QTArea {
+	private int x0;
+	private int y0;
+	private int x1;
+	private int y1;
+	// split point 
+	private int x=-1;    
+	private int y=-1;
+	
+	private Vector<QuadTreeElement> elements;	
+	private QTArea[] subAreas;	
+	
+	public QTArea(int x0, int y0, int x1, int y1) {
+		super();
+		this.x0 = x0;
+		this.y0 = y0;
+		this.x1 = x1;
+		this.y1 = y1;
+	}	
+	
+	void setElements(Vector<QuadTreeElement> elements) {
+		this.elements = elements;
+	}
+	
+	void split() {
+		if (elements==null || elements.size()<=StaticQuadTree.MAX_PER_BUCKET) return;			
+		// calculate centroid
+		double ax = 0;
+		double ay = 0;
+		for(QuadTreeElement e : elements) {
+			ax += e.getCenterX() ;
+			ay += e.getCenterY() ;
+		}
+		ax = ax / elements.size();
+		ay = ay / elements.size();
+		
+		try {
+			this.split( (int) Math.round(ax), (int) Math.round(ay) );
+		} catch (Exception e) {
+			e.printStackTrace();
+			return;
+		}
+	}
+	
+	private void split(int x, int y) {
+		this.x = x;
+		this.y = y;
+		
+		this.subAreas = new QTArea[4];
+		
+		this.subAreas[0] = new QTArea(x0, y0, x, y);		// NW
+		this.subAreas[1] = new QTArea(x+1, y0, x1, y);      // NE
+		this.subAreas[2] = new QTArea(x0 , y+1, x, y1);		// SW
+		this.subAreas[3] = new QTArea(x+1, y+1, x1, y1);    // SE
+		
+		this.partElements();		
+		
+		this.subAreas[0].split();
+		this.subAreas[1].split();
+		this.subAreas[2].split();
+		this.subAreas[3].split();
+	}
+	
+	private void partElements() {
+		
+		if (elements==null || elements.size()==0 || x<0 || y<0) return;
+		for (QuadTreeElement e : elements) {
+			int which = e.compareToPoint(this.x, this.y);
+			switch (which) {
+			case StaticQuadTree.ABOVE_LEFT:
+				this.subAreas[0].addElement(e);
+				break;
+			case StaticQuadTree.ABOVE_RIGHT:
+				this.subAreas[1].addElement(e);
+				break;
+			case StaticQuadTree.BELOW_LEFT:
+				this.subAreas[2].addElement(e);
+				break;
+			case StaticQuadTree.BELOW_RIGHT:
+				this.subAreas[3].addElement(e);
+				break;
+			case StaticQuadTree.ABOVE:
+				this.subAreas[0].addElement(e);
+				this.subAreas[1].addElement(e);
+				break;
+			case StaticQuadTree.BELOW:
+				this.subAreas[2].addElement(e);
+				this.subAreas[3].addElement(e);
+				break;
+			case StaticQuadTree.LEFT:
+				this.subAreas[0].addElement(e);
+				this.subAreas[2].addElement(e);
+				break;
+			case StaticQuadTree.RIGHT:
+				this.subAreas[1].addElement(e);
+				this.subAreas[3].addElement(e);
+				break;
+			case StaticQuadTree.CONTAINING:
+				this.subAreas[0].addElement(e);
+				this.subAreas[1].addElement(e);
+				this.subAreas[2].addElement(e);
+				this.subAreas[3].addElement(e);				
+				break;
+			}
+		}
+		this.elements.clear();
+	}
+	
+	public void addElement( QuadTreeElement elm ) {
+		if (this.elements == null) {
+			this.elements = new Vector<QuadTreeElement>();
+		}
+		this.elements.add( elm );
+	}
+	
+	public String toJSON() {
+		String json = "{";
+		json += "x0:" + x0 + ",";
+		json += "y0:" + y0 + ",";
+		json += "x1:" + x1 + ",";
+		json += "y1:" + y1 + ",";
+		json += "x:" + x + ",";
+		json += "y:" + y + ",";
+		json += "a:[";
+		if (this.subAreas != null) {
+			json += this.subAreas[0].toJSON() + "," + this.subAreas[1].toJSON() + ", " +
+			        this.subAreas[2].toJSON() + "," + this.subAreas[3].toJSON();
+		}
+		json += "],";
+		json += "e:[";
+		if (this.elements != null) {
+			boolean coma = false;
+			for (QuadTreeElement e : elements ){
+				if (coma) json += ",";
+				json += e.toJSON();
+				coma = true;
+			}
+		}
+		json += "]}";
+		return json;
+	}
+	
+	public QuadTreeElement searchElement(int x, int y) {
+		StaticQuadTree.tries ++;
+		if ( x < this.x0 || x>this.x1 || y<this.y0 || y>this.y1) {
+			return null;
+		}
+		
+		if ( subAreas != null) {
+			// Buscar en subareas
+			if ( x <= this.x ) {
+				if ( y <= this.y ) {
+					// NW
+					return this.subAreas[0].searchElement(x, y);
+				} else {
+					// SW
+					return this.subAreas[2].searchElement(x, y);
+				}
+			} else {
+				if ( y <= this.y ) {
+					// NE
+					return this.subAreas[1].searchElement(x, y);
+				} else {
+					// SE
+					return this.subAreas[3].searchElement(x, y);
+				}				
+			}
+		
+		} else if ( this.elements != null && this.elements.size() > 0 ) {
+			// Comprobar elementos
+			// Aqui es importante el orden en el que se insertaron
+			for ( QuadTreeElement e : this.elements) {
+				if ( e.contains(x, y) ) return e;
+			}
+		}
+		
+		return null;
+	}
+}

@@ -52,7 +52,7 @@ public class SVGViewFrame extends JFrame {
     private Dimension diagramSize;
     private String prevPath;
     private SVGController ctrl;
-    static String sbmlFile;
+    static String sbmlFile = null;
 
 	private void close() {		
 		this.svgCanvas = null;
@@ -597,14 +597,14 @@ public class SVGViewFrame extends JFrame {
 		try {
 			// 
 //			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");			
-//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
-			UIManager.setLookAndFeel( UIManager.getSystemLookAndFeelClassName() );
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+//			UIManager.setLookAndFeel( UIManager.getSystemLookAndFeelClassName() );
 			
 			loadSBMLLibrary();
 			if (args.length < 1) {
-				sbmlFile = "/media/DATA/_guillermo/desarrollo/PFC/batchTesting/Sbmls/components42.xml";
-			    sbmlFile = "/Users/guille/_guillermo/desarrollo/PFC/batchTesting/Sbmls/Alzheimer_disease_amyloid_secretase_pathway_CD4.xml";
-			    sbmlFile = "/Users/guille/_guillermo/desarrollo/PFC/batchTesting/Sbmls/components42.xml";
+//				sbmlFile = "/media/DATA/_guillermo/desarrollo/PFC/batchTesting/Sbmls/components42.xml";
+//			    sbmlFile = "/Users/guille/_guillermo/desarrollo/PFC/batchTesting/Sbmls/Alzheimer_disease_amyloid_secretase_pathway_CD4.xml";
+//			    sbmlFile = "/Users/guille/_guillermo/desarrollo/PFC/batchTesting/Sbmls/components42.xml";
 
 			} else
 				sbmlFile = args[0];

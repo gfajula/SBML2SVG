@@ -39,6 +39,12 @@ import celldesignerparse_4_0.commondata.View;
  *
  */
 public class Model {
+	public Model() {
+		super();
+		this.name = "";
+		this.diagramSize = new Dimension(640, 480);
+	}
+
 	private String name;
 	private MCompartment defaultCompartment = null;
 	private TreeMap<String,MCompartment> compartments = new TreeMap<String,MCompartment>();

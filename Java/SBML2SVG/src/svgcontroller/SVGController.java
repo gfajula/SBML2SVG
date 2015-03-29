@@ -46,7 +46,13 @@ public class SVGController {
 	 * @throws SBML2SVGException
 	 */
 	public SVGController(String sFile) throws SBML2SVGException {		
-		loadFile(sFile);
+		if (sFile != null) {
+			loadFile(sFile);
+		} else {
+			// Controller vacío
+			this.model = new model.Model();
+			svgView = new SVGView(this);
+		}
 	}
 
 	private void loadFile(String sFile) throws SBML2SVGException {
